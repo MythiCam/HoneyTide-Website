@@ -9,12 +9,14 @@
 ```
 <style>
     :root {
-        --honey: #d89c2b;
-        --deep-honey: #b47f1f;
-        --dark-brown: #3f372b;
-        --cream: #faf8f2;
-        --soft-gold: #f7d16a;
-        --green: #5f6f52;
+        --honey: #c8891f;
+        --deep-honey: #9f6414;
+        --forest: #3f5f3b;
+        --sage: #6f8061;
+        --earth: #3b3126;
+        --cream: #fbf7ed;
+        --soft-cream: #fffdf7;
+        --lavender: #8d789e;
         --white: #ffffff;
     }
 
@@ -24,153 +26,334 @@
 
     body {
         margin: 0;
-        font-family: Georgia, 'Times New Roman', serif;
-        line-height: 1.7;
-        color: var(--dark-brown);
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--earth);
         background-color: var(--cream);
-    }
-
-    header {
-        background: linear-gradient(rgba(63, 55, 43, 0.72), rgba(63, 55, 43, 0.72)),
-                    url("images/apiary-hero.jpg");
-        background-size: cover;
-        background-position: center;
-        color: var(--white);
-        text-align: center;
-        padding: 6rem 1.5rem;
-    }
-
-    header h1 {
-        font-size: 3.5rem;
-        margin-bottom: 0.5rem;
-        letter-spacing: 1px;
-    }
-
-    header p {
-        font-size: 1.25rem;
-        margin: 0.4rem 0;
+        line-height: 1.7;
     }
 
     nav {
-        background-color: var(--dark-brown);
-        text-align: center;
+        background-color: rgba(59, 49, 38, 0.96);
         padding: 1rem;
+        text-align: center;
         position: sticky;
         top: 0;
-        z-index: 10;
+        z-index: 50;
     }
 
     nav a {
         color: var(--white);
         text-decoration: none;
-        margin: 0 14px;
-        font-weight: bold;
+        margin: 0 16px;
         font-family: Arial, sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
     }
 
     nav a:hover {
-        color: var(--soft-gold);
+        color: #f3cf76;
     }
 
-    section {
-        max-width: 1100px;
-        margin: auto;
-        padding: 3rem 1.5rem;
-    }
-
-    .intro {
+    .hero {
+        min-height: 92vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        max-width: 850px;
+        padding: 4rem 1.5rem;
+        background:
+            radial-gradient(circle at top, rgba(255, 255, 255, 0.95), rgba(251, 247, 237, 0.9)),
+            linear-gradient(135deg, #fbf7ed, #efe4cf);
     }
 
-    .intro h2,
-    section h2 {
+    .hero-inner {
+        max-width: 1050px;
+    }
+
+    .hero-logo {
+        width: min(520px, 90vw);
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: Arial, sans-serif;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--forest);
+        margin-bottom: 0.75rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.3rem, 5vw, 4.8rem);
+        line-height: 1.08;
+        margin: 0 auto 1rem;
+        max-width: 950px;
+        color: var(--earth);
+    }
+
+    .hero .slogan {
         color: var(--deep-honey);
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: 1.35rem;
+        font-style: italic;
+        margin: 0.5rem 0 1.5rem;
     }
 
-    .tagline-box {
-        background-color: var(--white);
-        border-left: 6px solid var(--honey);
-        padding: 1.5rem;
+    .hero p {
+        max-width: 760px;
+        margin: 0 auto 1.25rem;
+        font-size: 1.15rem;
+    }
+
+    .button-row {
         margin-top: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        font-size: 1.1rem;
-    }
-
-    .card-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 22px;
-        margin-top: 2rem;
-    }
-
-    .card {
-        background: var(--white);
-        padding: 1.7rem;
-        border-radius: 14px;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.09);
-        border-top: 5px solid var(--honey);
-    }
-
-    .card h3 {
-        color: var(--green);
-        margin-top: 0;
-    }
-
-    .highlight {
-        background-color: #fff4d6;
-        border-radius: 14px;
-        padding: 2rem;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.07);
     }
 
     .button {
         display: inline-block;
-        background-color: var(--honey);
-        color: var(--white);
-        padding: 13px 24px;
+        padding: 0.9rem 1.4rem;
+        border-radius: 999px;
         text-decoration: none;
-        border-radius: 30px;
-        margin-top: 1rem;
         font-family: Arial, sans-serif;
-        font-weight: bold;
+        font-weight: 700;
+        margin: 0.4rem;
+        transition: 0.2s ease;
     }
 
-    .button:hover {
+    .button-primary {
+        background-color: var(--honey);
+        color: var(--white);
+    }
+
+    .button-primary:hover {
         background-color: var(--deep-honey);
     }
 
-    .secondary-button {
-        background-color: var(--green);
+    .button-secondary {
+        background-color: transparent;
+        border: 2px solid var(--forest);
+        color: var(--forest);
+    }
+
+    .button-secondary:hover {
+        background-color: var(--forest);
+        color: var(--white);
+    }
+
+    section {
+        max-width: 1180px;
+        margin: auto;
+        padding: 5rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.15;
+        color: var(--forest);
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .section-kicker {
+        color: var(--deep-honey);
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 800;
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .two-column {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .image-card {
+        background-color: var(--white);
+        padding: 0.8rem;
+        border-radius: 26px;
+        box-shadow: 0 18px 40px rgba(59, 49, 38, 0.14);
+    }
+
+    .image-card img {
+        width: 100%;
+        display: block;
+        border-radius: 20px;
+    }
+
+    .mission-quote {
+        background: var(--soft-cream);
+        border-left: 6px solid var(--honey);
+        padding: 1.5rem;
+        border-radius: 14px;
+        box-shadow: 0 8px 24px rgba(59, 49, 38, 0.08);
+        margin-top: 1.5rem;
+        font-size: 1.12rem;
+    }
+
+    .pillars {
+        background-color: var(--earth);
+        max-width: none;
+        padding: 5rem 1.5rem;
+    }
+
+    .pillars-inner {
+        max-width: 1180px;
+        margin: auto;
+    }
+
+    .pillars .section-title,
+    .pillars p {
+        color: var(--white);
+    }
+
+    .pillar-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.4rem;
+        margin-top: 2.5rem;
+    }
+
+    .pillar-card {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 22px;
+        padding: 2rem;
+        color: var(--white);
+    }
+
+    .pillar-card h3 {
+        color: #f3cf76;
+        font-size: 1.35rem;
+        margin-top: 0;
+    }
+
+    .icon {
+        font-size: 2rem;
+        display: block;
+        margin-bottom: 0.75rem;
+    }
+
+    .apiary-section {
+        background-color: var(--soft-cream);
+        max-width: none;
+    }
+
+    .apiary-inner {
+        max-width: 1180px;
+        margin: auto;
+    }
+
+    .colony-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .colony {
+        background: var(--cream);
+        border-radius: 18px;
+        padding: 1.2rem;
+        border: 1px solid #eadcc1;
+    }
+
+    .colony h3 {
+        margin: 0 0 0.3rem;
+        color: var(--deep-honey);
+    }
+
+    .learning {
+        text-align: center;
+        max-width: 900px;
+    }
+
+    .credential-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+        margin-top: 2rem;
+    }
+
+    .credential {
+        background: var(--white);
+        border: 1px solid #eadcc1;
+        border-radius: 999px;
+        padding: 0.8rem 1.2rem;
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        color: var(--forest);
+    }
+
+    .vision {
+        background:
+            linear-gradient(rgba(63, 95, 59, 0.88), rgba(63, 95, 59, 0.88)),
+            url("images/header-banner.png");
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        max-width: none;
+        text-align: center;
+        padding: 6rem 1.5rem;
+    }
+
+    .vision-inner {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .vision h2 {
+        color: var(--white);
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-top: 0;
+    }
+
+    .vision p {
+        font-size: 1.12rem;
+    }
+
+    .connect {
+        text-align: center;
+        max-width: 850px;
     }
 
     footer {
-        background-color: var(--dark-brown);
+        background-color: var(--earth);
         color: var(--white);
         text-align: center;
-        padding: 2.5rem 1rem;
-        margin-top: 3rem;
+        padding: 3rem 1rem;
     }
 
-    footer h3 {
-        margin-bottom: 0.3rem;
+    footer img {
+        width: 110px;
+        max-width: 45vw;
+        margin-bottom: 1rem;
     }
 
-    @media (max-width: 700px) {
-        header {
-            padding: 4rem 1rem;
-        }
-
-        header h1 {
-            font-size: 2.4rem;
-        }
-
+    @media (max-width: 850px) {
         nav a {
             display: block;
-            margin: 8px 0;
+            margin: 0.5rem 0;
+        }
+
+        .hero {
+            min-height: auto;
+        }
+
+        .two-column,
+        .pillar-grid,
+        .colony-list {
+            grid-template-columns: 1fr;
+        }
+
+        section {
+            padding: 3.5rem 1.2rem;
         }
     }
 </style>
@@ -180,12 +363,6 @@
 
 <body>
 
-<header>
-    <h1>HoneyTide Apiary</h1>
-    <p><em>Nature's Rhythm. A Bee's Blessing.</em></p>
-    <p>Springfield, Oregon</p>
-</header>
-
 <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -194,131 +371,218 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<section class="intro">
-    <h2>A Small Oregon Apiary Growing with Purpose</h2>
+<header class="hero">
+    <div class="hero-inner">
+        <img class="hero-logo" src="images/hero-logo.png" alt="HoneyTide Apiary detailed logo">
 
 ```
-<p>
-    HoneyTide Apiary is a small, developing apiary rooted in sustainable
-    beekeeping, pollinator stewardship, education, and a deep respect for
-    the natural rhythms that support healthy colonies and thriving ecosystems.
-</p>
+    <div class="eyebrow">Springfield, Oregon</div>
 
-<p>
-    What began as a personal fascination with honey bees has become a
-    hands-on journey of learning, care, conservation, and community
-    connection.
-</p>
+    <h1>Strengthening the Relationship Between People, Pollinators, and the Natural World</h1>
 
-<div class="tagline-box">
-    HoneyTide is being built one colony, one swarm, one inspection, and one
-    season at a time — with patience, curiosity, and a commitment to doing
-    the work responsibly.
+    <p class="slogan">Nature's Rhythm. A Bee's Blessing.</p>
+
+    <p>
+        Through stewardship, education, and sustainable beekeeping,
+        HoneyTide Apiary seeks to cultivate healthier ecosystems,
+        stronger communities, and a deeper appreciation for nature's rhythms.
+    </p>
+
+    <div class="button-row">
+        <a class="button button-primary" href="apiary.html">Explore the Apiary</a>
+        <a class="button button-secondary" href="education.html">Learn About Pollinators</a>
+    </div>
+</div>
+```
+
+</header>
+
+<section>
+    <div class="two-column">
+        <div>
+            <div class="section-kicker">Our Mission</div>
+            <h2 class="section-title">Stewardship Begins with Connection</h2>
+
+```
+        <p>
+            HoneyTide Apiary exists to strengthen the relationship between
+            people, pollinators, and the natural world through stewardship,
+            education, and sustainable beekeeping.
+        </p>
+
+        <p>
+            We believe that when nature is cared for and allowed to thrive,
+            healthy ecosystems, resilient communities, and the gifts of the
+            hive follow naturally.
+        </p>
+
+        <div class="mission-quote">
+            Honey and hive products are not the purpose of our work, but a
+            blessing that emerges when people and nature move together in rhythm.
+        </div>
+    </div>
+
+    <div class="image-card">
+        <img src="images/camron-fieldwork.jpg" alt="HoneyTide beekeeper working with bees in the field">
+    </div>
 </div>
 ```
 
 </section>
 
-<section>
-    <h2>What HoneyTide Focuses On</h2>
-
-```
-<div class="card-container">
-
-    <div class="card">
-        <h3>Sustainable Beekeeping</h3>
-        <p>
-            Caring for honey bee colonies with attention to colony health,
-            responsible management, seasonal needs, and long-term resilience.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Pollinator Stewardship</h3>
-        <p>
-            Supporting awareness of honey bees, native pollinators, habitat,
-            forage, and the connection between pollinator health and healthy
-            communities.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Apiary Education</h3>
-        <p>
-            Sharing the learning process openly through beekeeping education,
-            community resources, and real updates from the apiary.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Swarm Assistance</h3>
-        <p>
-            Helping with honey bee swarm relocation when possible and offering
-            calm, informed guidance to community members who encounter swarms.
-        </p>
-    </div>
-
-</div>
-```
-
-</section>
-
-<section>
-    <div class="highlight">
-        <h2>Growing Through Education</h2>
+<section class="pillars">
+    <div class="pillars-inner">
+        <div class="section-kicker">What Guides the Work</div>
+        <h2 class="section-title">The Pillars of HoneyTide</h2>
 
 ```
     <p>
-        HoneyTide Apiary is actively growing through continued education,
-        including the Oregon State University Master Beekeeper Program,
-        Bee Advocate work, and participation in the Lane County Beekeepers
-        Association.
+        HoneyTide is built around the belief that caring for pollinators is
+        also a way of caring for land, food systems, and community.
     </p>
 
-    <p>
-        Beekeeping is a lifelong learning process. HoneyTide is committed
-        to documenting that journey honestly — including the successes, the
-        lessons, and the seasonal decisions that shape a responsible apiary.
-    </p>
+    <div class="pillar-grid">
+        <div class="pillar-card">
+            <span class="icon">🐝</span>
+            <h3>Pollinator Stewardship</h3>
+            <p>
+                Supporting honey bees, native pollinators, habitat awareness,
+                and healthier ecosystems through intentional care.
+            </p>
+        </div>
 
-    <a class="button secondary-button" href="education.html">Explore Education</a>
+        <div class="pillar-card">
+            <span class="icon">🌿</span>
+            <h3>Environmental Education</h3>
+            <p>
+                Helping people better understand pollinators, plants,
+                agriculture, and the living systems that sustain us.
+            </p>
+        </div>
+
+        <div class="pillar-card">
+            <span class="icon">🍯</span>
+            <h3>Sustainable Beekeeping</h3>
+            <p>
+                Practicing responsible hive management rooted in patience,
+                observation, learning, and respect for the bees.
+            </p>
+        </div>
+    </div>
 </div>
 ```
 
 </section>
 
-<section>
-    <h2>Follow the Apiary</h2>
+<section class="apiary-section">
+    <div class="apiary-inner">
+        <div class="two-column">
+            <div class="image-card">
+                <img src="images/swarm-capture.jpg" alt="HoneyTide swarm capture work">
+            </div>
 
 ```
-<p>
-    From establishing new colonies to capturing swarms and watching each hive
-    develop through the season, HoneyTide’s story is still being written.
-    The apiary page will document colony updates, seasonal milestones, and
-    the growth of this small Oregon beekeeping operation.
-</p>
+        <div>
+            <div class="section-kicker">The Apiary Journey</div>
+            <h2 class="section-title">Following the Bees, One Season at a Time</h2>
 
-<a class="button" href="apiary.html">Visit Our Apiary</a>
+            <p>
+                HoneyTide is still young, and that is part of the story.
+                Each inspection, swarm capture, and seasonal decision helps
+                shape the apiary's future.
+            </p>
+
+            <p>
+                The apiary currently includes colonies such as Zion, Tortooga,
+                and Butera, each offering its own lessons in colony health,
+                growth, adaptation, and stewardship.
+            </p>
+
+            <div class="colony-list">
+                <div class="colony">
+                    <h3>Zion</h3>
+                    <p>A strong colony helping shape HoneyTide's early growth.</p>
+                </div>
+
+                <div class="colony">
+                    <h3>Tortooga</h3>
+                    <p>A colony teaching patience, observation, and management.</p>
+                </div>
+
+                <div class="colony">
+                    <h3>Butera</h3>
+                    <p>A captured swarm and reminder of the living rhythm of bees.</p>
+                </div>
+            </div>
+
+            <a class="button button-primary" href="apiary.html">Visit Our Apiary</a>
+        </div>
+    </div>
+</div>
 ```
 
 </section>
 
-<section>
-    <h2>Connect with HoneyTide</h2>
+<section class="learning">
+    <div class="section-kicker">Learning in Public</div>
+    <h2 class="section-title">Committed to Education and Growth</h2>
 
 ```
 <p>
-    Have a question about bees, pollinators, swarm assistance, or community
-    education? HoneyTide welcomes thoughtful connections with neighbors,
-    land stewards, growers, educators, and anyone curious about pollinators.
+    Beekeeping is a lifelong learning process. HoneyTide is actively growing
+    through continued education, mentorship, community involvement, and
+    hands-on experience in the apiary.
 </p>
 
-<a class="button" href="contact.html">Contact HoneyTide</a>
+<div class="credential-row">
+    <div class="credential">OSU Master Beekeeper Program</div>
+    <div class="credential">Bee Advocate Work</div>
+    <div class="credential">Lane County Beekeepers Association</div>
+</div>
+```
+
+</section>
+
+<section class="vision">
+    <div class="vision-inner">
+        <h2>A Future Rooted in Stewardship</h2>
+
+```
+    <p>
+        We envision a future where people have a deeper relationship with
+        the ecosystems that sustain them, and where local communities actively
+        support pollinator health, sustainable agriculture, and resilient
+        local food systems.
+    </p>
+
+    <p>
+        As HoneyTide grows, the vision is to expand beyond the apiary into
+        a larger community-centered space where beekeeping, agriculture,
+        education, gardens, mead production, workshops, and local gatherings
+        come together.
+    </p>
+</div>
+```
+
+</section>
+
+<section class="connect">
+    <div class="section-kicker">Connect</div>
+    <h2 class="section-title">Begin with Curiosity</h2>
+
+```
+<p>
+    Have a question about bees, pollinators, swarm assistance, education,
+    or the HoneyTide journey? Thoughtful connections are always welcome.
+</p>
+
+<a class="button button-primary" href="contact.html">Contact HoneyTide</a>
 ```
 
 </section>
 
 <footer>
+    <img src="images/logo.png" alt="HoneyTide Apiary logo">
     <h3>HoneyTide Apiary</h3>
     <p>Nature's Rhythm. A Bee's Blessing.</p>
     <p>
