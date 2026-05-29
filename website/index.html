@@ -8,88 +8,170 @@
 
 ```
 <style>
+    :root {
+        --honey: #d89c2b;
+        --deep-honey: #b47f1f;
+        --dark-brown: #3f372b;
+        --cream: #faf8f2;
+        --soft-gold: #f7d16a;
+        --green: #5f6f52;
+        --white: #ffffff;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
     body {
-        font-family: Arial, sans-serif;
         margin: 0;
-        line-height: 1.6;
-        color: #333;
-        background-color: #faf8f2;
+        font-family: Georgia, 'Times New Roman', serif;
+        line-height: 1.7;
+        color: var(--dark-brown);
+        background-color: var(--cream);
     }
 
     header {
-        background-color: #d89c2b;
-        color: white;
+        background: linear-gradient(rgba(63, 55, 43, 0.72), rgba(63, 55, 43, 0.72)),
+                    url("images/apiary-hero.jpg");
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
         text-align: center;
-        padding: 3rem 1rem;
+        padding: 6rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px;
+    }
+
+    header p {
+        font-size: 1.25rem;
+        margin: 0.4rem 0;
     }
 
     nav {
-        background-color: #3f372b;
+        background-color: var(--dark-brown);
         text-align: center;
         padding: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 10;
     }
 
     nav a {
-        color: white;
+        color: var(--white);
         text-decoration: none;
-        margin: 0 15px;
+        margin: 0 14px;
         font-weight: bold;
+        font-family: Arial, sans-serif;
     }
 
     nav a:hover {
-        color: #f7d16a;
+        color: var(--soft-gold);
     }
 
     section {
-        max-width: 1000px;
+        max-width: 1100px;
         margin: auto;
-        padding: 2rem;
+        padding: 3rem 1.5rem;
     }
 
-    .hero {
+    .intro {
         text-align: center;
+        max-width: 850px;
     }
 
-    .hero h2 {
-        color: #b47f1f;
+    .intro h2,
+    section h2 {
+        color: var(--deep-honey);
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .tagline-box {
+        background-color: var(--white);
+        border-left: 6px solid var(--honey);
+        padding: 1.5rem;
+        margin-top: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        font-size: 1.1rem;
     }
 
     .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 22px;
         margin-top: 2rem;
     }
 
     .card {
-        flex: 1;
-        min-width: 250px;
-        background: white;
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        background: var(--white);
+        padding: 1.7rem;
+        border-radius: 14px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.09);
+        border-top: 5px solid var(--honey);
     }
 
-    footer {
-        background-color: #3f372b;
-        color: white;
-        text-align: center;
+    .card h3 {
+        color: var(--green);
+        margin-top: 0;
+    }
+
+    .highlight {
+        background-color: #fff4d6;
+        border-radius: 14px;
         padding: 2rem;
-        margin-top: 3rem;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.07);
     }
 
     .button {
         display: inline-block;
-        background-color: #d89c2b;
-        color: white;
-        padding: 12px 20px;
+        background-color: var(--honey);
+        color: var(--white);
+        padding: 13px 24px;
         text-decoration: none;
-        border-radius: 5px;
+        border-radius: 30px;
         margin-top: 1rem;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
     }
 
     .button:hover {
-        background-color: #b47f1f;
+        background-color: var(--deep-honey);
+    }
+
+    .secondary-button {
+        background-color: var(--green);
+    }
+
+    footer {
+        background-color: var(--dark-brown);
+        color: var(--white);
+        text-align: center;
+        padding: 2.5rem 1rem;
+        margin-top: 3rem;
+    }
+
+    footer h3 {
+        margin-bottom: 0.3rem;
+    }
+
+    @media (max-width: 700px) {
+        header {
+            padding: 4rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+        }
+
+        nav a {
+            display: block;
+            margin: 8px 0;
+        }
     }
 </style>
 ```
@@ -112,55 +194,67 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<section class="hero">
-    <h2>Stewardship, Education, and a Passion for Bees</h2>
+<section class="intro">
+    <h2>A Small Oregon Apiary Growing with Purpose</h2>
 
 ```
 <p>
-    HoneyTide Apiary is a small Oregon apiary dedicated to sustainable
-    beekeeping, pollinator stewardship, and education. What began as a
-    fascination with honey bees has grown into a journey of learning,
-    conservation, and community connection.
+    HoneyTide Apiary is a small, developing apiary rooted in sustainable
+    beekeeping, pollinator stewardship, education, and a deep respect for
+    the natural rhythms that support healthy colonies and thriving ecosystems.
 </p>
 
 <p>
-    Every colony, swarm capture, inspection, and lesson helps shape the
-    future of HoneyTide. We believe healthy pollinators are essential to
-    healthy ecosystems, thriving agriculture, and vibrant communities.
+    What began as a personal fascination with honey bees has become a
+    hands-on journey of learning, care, conservation, and community
+    connection.
 </p>
+
+<div class="tagline-box">
+    HoneyTide is being built one colony, one swarm, one inspection, and one
+    season at a time — with patience, curiosity, and a commitment to doing
+    the work responsibly.
+</div>
 ```
 
 </section>
 
 <section>
+    <h2>What HoneyTide Focuses On</h2>
 
 ```
-<h2>What We Do</h2>
-
 <div class="card-container">
 
     <div class="card">
         <h3>Sustainable Beekeeping</h3>
         <p>
-            Managing honey bee colonies with a focus on long-term health,
-            responsible stewardship, and ethical beekeeping practices.
+            Caring for honey bee colonies with attention to colony health,
+            responsible management, seasonal needs, and long-term resilience.
         </p>
     </div>
 
     <div class="card">
-        <h3>Pollinator Education</h3>
+        <h3>Pollinator Stewardship</h3>
         <p>
-            Sharing knowledge about honey bees, native pollinators,
-            habitat creation, and the important role pollinators play
-            in our environment.
+            Supporting awareness of honey bees, native pollinators, habitat,
+            forage, and the connection between pollinator health and healthy
+            communities.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Apiary Education</h3>
+        <p>
+            Sharing the learning process openly through beekeeping education,
+            community resources, and real updates from the apiary.
         </p>
     </div>
 
     <div class="card">
         <h3>Swarm Assistance</h3>
         <p>
-            Helping relocate honey bee swarms whenever possible and
-            educating the community about their importance.
+            Helping with honey bee swarm relocation when possible and offering
+            calm, informed guidance to community members who encounter swarms.
         </p>
     </div>
 
@@ -170,34 +264,38 @@
 </section>
 
 <section>
+    <div class="highlight">
+        <h2>Growing Through Education</h2>
 
 ```
-<h2>Growing Through Education</h2>
+    <p>
+        HoneyTide Apiary is actively growing through continued education,
+        including the Oregon State University Master Beekeeper Program,
+        Bee Advocate work, and participation in the Lane County Beekeepers
+        Association.
+    </p>
 
-<p>
-    HoneyTide Apiary is actively involved in continuing education through
-    the Oregon State University Master Beekeeper Program, Bee Advocate
-    initiatives, and participation in the Lane County Beekeepers
-    Association.
-</p>
+    <p>
+        Beekeeping is a lifelong learning process. HoneyTide is committed
+        to documenting that journey honestly — including the successes, the
+        lessons, and the seasonal decisions that shape a responsible apiary.
+    </p>
 
-<p>
-    Beekeeping is a lifelong learning process, and HoneyTide is committed
-    to sharing that journey openly with the community.
-</p>
+    <a class="button secondary-button" href="education.html">Explore Education</a>
+</div>
 ```
 
 </section>
 
 <section>
+    <h2>Follow the Apiary</h2>
 
 ```
-<h2>Follow Our Journey</h2>
-
 <p>
-    From establishing our first colonies to capturing swarms and
-    documenting seasonal growth, HoneyTide is building an apiary one
-    season at a time.
+    From establishing new colonies to capturing swarms and watching each hive
+    develop through the season, HoneyTide’s story is still being written.
+    The apiary page will document colony updates, seasonal milestones, and
+    the growth of this small Oregon beekeeping operation.
 </p>
 
 <a class="button" href="apiary.html">Visit Our Apiary</a>
@@ -205,21 +303,29 @@
 
 </section>
 
-<footer>
+<section>
+    <h2>Connect with HoneyTide</h2>
 
 ```
-<h3>HoneyTide Apiary</h3>
-
-<p>Nature's Rhythm. A Bee's Blessing.</p>
-
 <p>
-    Springfield, Oregon<br>
-    honeytideapiary@gmail.com
+    Have a question about bees, pollinators, swarm assistance, or community
+    education? HoneyTide welcomes thoughtful connections with neighbors,
+    land stewards, growers, educators, and anyone curious about pollinators.
 </p>
+
+<a class="button" href="contact.html">Contact HoneyTide</a>
 ```
 
+</section>
+
+<footer>
+    <h3>HoneyTide Apiary</h3>
+    <p>Nature's Rhythm. A Bee's Blessing.</p>
+    <p>
+        Springfield, Oregon<br>
+        honeytideapiary@gmail.com
+    </p>
 </footer>
 
 </body>
 </html>
-
