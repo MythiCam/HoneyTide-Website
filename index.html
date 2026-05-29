@@ -98,13 +98,14 @@
       justify-content: center;
       gap: 0.75rem;
       flex-wrap: wrap;
+      margin-top: 1.2rem;
     }
 
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 210px;
+      min-width: 215px;
       padding: 0.85rem 1.35rem;
       border-radius: 999px;
       text-decoration: none;
@@ -118,10 +119,19 @@
       color: white;
     }
 
+    .button-primary:hover {
+      background: var(--deep-honey);
+    }
+
     .button-secondary {
       border: 2px solid var(--forest);
       color: var(--forest);
       background: transparent;
+    }
+
+    .button-secondary:hover {
+      background: var(--forest);
+      color: white;
     }
 
     section {
@@ -139,6 +149,7 @@
 
     .text-block {
       max-width: 540px;
+      margin: auto;
     }
 
     .section-kicker {
@@ -169,6 +180,7 @@
 
     .image-card img {
       width: 100%;
+      height: auto;
       display: block;
       border-radius: 18px;
     }
@@ -178,11 +190,112 @@
       border-left: 6px solid var(--honey);
       padding: 1.35rem;
       border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(51, 41, 31, 0.08);
+      margin-top: 1.3rem;
+      font-size: 1.08rem;
+    }
+
+    .pillars {
+      background: var(--earth);
+      max-width: none;
+      color: white;
+      padding: 0;
+    }
+
+    .pillars-inner {
+      max-width: 1120px;
+      margin: auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .pillars h2 {
+      color: white;
+      text-align: center;
+    }
+
+    .pillars-intro {
+      max-width: 760px;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .pillar-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 20px;
+      padding: 1.6rem;
+    }
+
+    .pillar-card h3 {
+      color: var(--soft-gold);
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+
+    .apiary {
+      background: #fffdf7;
+      max-width: none;
+      padding: 0;
+    }
+
+    .apiary-inner {
+      max-width: 1120px;
+      margin: auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .colony-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
       margin-top: 1.3rem;
     }
 
+    .colony {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1rem;
+    }
+
+    .colony h3 {
+      color: var(--deep-honey);
+      margin: 0 0 0.25rem;
+    }
+
+    .vision {
+      text-align: center;
+      max-width: 900px;
+    }
+
+    footer {
+      background: var(--earth);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    footer img {
+      width: 105px;
+      max-width: 45vw;
+      margin-bottom: 1rem;
+    }
+
     @media (max-width: 850px) {
-      .two-column {
+      nav a {
+        display: block;
+        margin: 0.45rem 0;
+      }
+
+      .two-column,
+      .pillar-grid,
+      .colony-list {
         grid-template-columns: 1fr;
       }
 
@@ -190,9 +303,15 @@
         max-width: 100%;
       }
 
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
+      section,
+      .pillars-inner,
+      .apiary-inner {
+        padding: 3rem 1.2rem;
+      }
+
+      .button {
+        width: 100%;
+        max-width: 320px;
       }
     }
   </style>
@@ -209,7 +328,7 @@
 </nav>
 
 <header class="hero">
-  <img class="hero-logo" src="images/hero-logo.png" alt="HoneyTide Apiary Logo">
+  <img class="hero-logo" src="images/hero-logo.png" alt="HoneyTide Apiary logo illustration">
 
   <div class="eyebrow">Springfield, Oregon</div>
 
@@ -229,4 +348,150 @@
   </div>
 </header>
 
-<!-- Continue with the remaining sections -->
+<section>
+  <div class="two-column">
+    <div class="image-card">
+      <img src="images/camron-fieldwork.jpg" alt="HoneyTide beekeeper working with bees in the field">
+    </div>
+
+    <div class="text-block">
+      <div class="section-kicker">Our Mission</div>
+      <h2>Stewardship Begins with Connection</h2>
+
+      <p>
+        HoneyTide Apiary exists to strengthen the relationship between people,
+        pollinators, and the natural world through stewardship, education, and
+        sustainable beekeeping.
+      </p>
+
+      <p>
+        We believe that when nature is cared for and allowed to thrive, healthy
+        ecosystems, resilient communities, and the gifts of the hive follow naturally.
+      </p>
+
+      <div class="quote-box">
+        Honey and hive products are not the purpose of our work, but a blessing
+        that emerges when people and nature move together in rhythm.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pillars">
+  <div class="pillars-inner">
+    <div class="pillars-intro">
+      <div class="section-kicker">What Guides the Work</div>
+      <h2>The Pillars of HoneyTide</h2>
+      <p>
+        Caring for pollinators is also a way of caring for land, food systems,
+        and community.
+      </p>
+    </div>
+
+    <div class="pillar-grid">
+      <div class="pillar-card">
+        <h3>🐝 Pollinator Stewardship</h3>
+        <p>
+          Supporting honey bees, native pollinators, habitat awareness, and
+          healthier ecosystems through intentional care.
+        </p>
+      </div>
+
+      <div class="pillar-card">
+        <h3>🌿 Environmental Education</h3>
+        <p>
+          Helping people understand pollinators, plants, agriculture, and the
+          living systems that sustain us.
+        </p>
+      </div>
+
+      <div class="pillar-card">
+        <h3>🍯 Sustainable Beekeeping</h3>
+        <p>
+          Practicing responsible hive management rooted in patience, observation,
+          learning, and respect for the bees.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="apiary">
+  <div class="apiary-inner">
+    <div class="two-column">
+      <div class="text-block">
+        <div class="section-kicker">The Apiary Journey</div>
+        <h2>Following the Bees, One Season at a Time</h2>
+
+        <p>
+          HoneyTide is still young, and that is part of the story. Each inspection,
+          swarm capture, and seasonal decision helps shape the apiary's future.
+        </p>
+
+        <p>
+          Our current colonies each offer their own lessons in colony health,
+          growth, adaptation, and stewardship.
+        </p>
+
+        <div class="colony-list">
+          <div class="colony">
+            <h3>Zion</h3>
+            <p>A strong colony helping shape HoneyTide's early growth.</p>
+          </div>
+
+          <div class="colony">
+            <h3>Tortooga</h3>
+            <p>A colony teaching patience, observation, and management.</p>
+          </div>
+
+          <div class="colony">
+            <h3>Butera</h3>
+            <p>A captured swarm and reminder of the living rhythm of bees.</p>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <a class="button button-primary" href="apiary.html">Visit Our Apiary</a>
+        </div>
+      </div>
+
+      <div class="image-card">
+        <img src="images/swarm-capture.jpg" alt="HoneyTide swarm capture work">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="vision">
+  <div class="section-kicker">Our Vision</div>
+  <h2>A Future Rooted in Stewardship</h2>
+
+  <p>
+    We envision a future where people have a deeper relationship with the ecosystems
+    that sustain them, and where local communities actively support pollinator
+    health, sustainable agriculture, and resilient local food systems.
+  </p>
+
+  <p>
+    As HoneyTide grows, the long-term vision is to expand beyond the apiary into
+    a community-centered space where beekeeping, agriculture, education, gardens,
+    mead production, workshops, and local gatherings come together.
+  </p>
+
+  <div class="button-row">
+    <a class="button button-primary" href="contact.html">Connect with HoneyTide</a>
+  </div>
+</section>
+
+<footer>
+  <img src="images/logo.png" alt="HoneyTide Apiary logo">
+  <h3>HoneyTide Apiary</h3>
+  <p>Nature's Rhythm. A Bee's Blessing.</p>
+  <p>
+    Springfield, Oregon<br>
+    honeytideapiary@gmail.com
+  </p>
+</footer>
+
+</body>
+</html>
