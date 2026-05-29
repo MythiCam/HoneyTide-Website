@@ -51,19 +51,54 @@
       color: var(--soft-gold);
     }
 
-    .hero {
+   .hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 4.5rem 1.5rem 5rem;
-  background:
-    linear-gradient(
-      rgba(251, 247, 237, 0.86),
-      rgba(251, 247, 237, 0.92)
-    ),
-    url("images/header-banner.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 4rem 1.5rem;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
+  color: white;
+}
+
+.hero-content h1 {
+  color: white;
+}
+
+.hero-content p {
+  color: white;
+}
+
+.hero-content .eyebrow {
+  color: #f3dfac;
+}
+
+.hero-content .slogan {
+  color: #f3dfac;
 }
 
     .hero-logo {
@@ -144,6 +179,16 @@
       color: white;
     }
 
+    .hero-button {
+  border-color: white;
+  color: white;
+    }
+
+    .hero-button:hover {
+  background: white;
+  color: var(--forest);
+    }
+    
     section {
       max-width: 1120px;
       margin: auto;
@@ -360,24 +405,53 @@
 </nav>
 
 <header class="hero">
-  <img class="hero-logo" src="images/hero-logo.png" alt="HoneyTide Apiary logo illustration">
 
-  <div class="eyebrow">Springfield, Oregon</div>
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="images/hive-entrance-hero.mp4" type="video/mp4">
+  </video>
 
-  <h1>Strengthening the Relationship Between People, Pollinators, and the Natural World</h1>
+  <div class="hero-overlay"></div>
 
-  <div class="slogan">Nature's Rhythm. A Bee's Blessing.</div>
+  <div class="hero-content">
 
-  <p>
-    HoneyTide Apiary is a small Oregon apiary rooted in stewardship,
-    education, sustainable beekeeping, and a deeper connection to the living
-    systems that sustain us.
-  </p>
+    <img class="hero-logo"
+         src="images/hero-logo.png"
+         alt="HoneyTide Apiary Logo">
 
-  <div class="button-row">
-    <a class="button button-primary" href="apiary.html">Explore the Apiary</a>
-    <a class="button button-secondary" href="education.html">Learn About Pollinators</a>
+    <div class="eyebrow">
+      Springfield, Oregon
+    </div>
+
+    <h1>
+      Strengthening the Relationship Between People,
+      Pollinators, and the Natural World
+    </h1>
+
+    <div class="slogan">
+      Nature's Rhythm. A Bee's Blessing.
+    </div>
+
+    <p>
+      HoneyTide Apiary is a small Oregon apiary rooted in
+      stewardship, education, sustainable beekeeping, and
+      a deeper connection to the living systems that
+      sustain us.
+    </p>
+
+    <div class="button-row">
+      <a class="button button-primary"
+         href="apiary.html">
+         Explore the Apiary
+      </a>
+
+      <a class="button button-secondary hero-button"
+         href="education.html">
+         Learn About Pollinators
+      </a>
+    </div>
+
   </div>
+
 </header>
 
 <section>
