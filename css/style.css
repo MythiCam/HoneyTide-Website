@@ -1,1 +1,43 @@
-/* HoneyTide Apiary Website Styles */
+  <style>
+    :root {
+      --honey: #c8891f;
+      --deep-honey: #9f6414;
+      --forest: #35583a;
+      --earth: #33291f;
+      --cream: #fbf7ed;
+      --white: #ffffff;
+      --soft-gold: #f3dfac;
+      --border: #eadcc1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--earth);
+      background: var(--cream);
+      line-height: 1.65;
+    }
+
+    nav {
+  background: var(--earth);
+  text-align: center;
+  padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: var(--soft-gold);
+    }
+
