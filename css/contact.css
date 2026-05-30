@@ -118,6 +118,26 @@
   box-shadow: 0 12px 28px rgba(51, 41, 31, 0.08);
 }
 
+ .contact-direct {
+  margin-top: 1rem;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: var(--deep-honey);
+  word-break: break-word;
+}
+
+.primary-contact {
+  border-top: 5px solid var(--honey);
+}
+
+.swarm-card {
+  border-top: 5px solid var(--forest);
+}
+
+.contact-card .button {
+  margin: 0.45rem;
+}
+
 @media (max-width: 850px) {
   .contact-hero {
     padding: 4rem 1.2rem;
