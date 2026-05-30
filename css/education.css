@@ -26,13 +26,41 @@
   color: var(--soft-gold);
 }
 
-.education-intro {
+.education-intro,
+.learning-section,
+.products-section,
+.plant-section,
+.education-close {
   text-align: center;
   max-width: 900px;
 }
 
-.education-intro p {
+.education-intro p,
+.learning-section p,
+.products-section p,
+.education-close p {
   font-size: 1.1rem;
+}
+
+.wide-image {
+  max-width: 950px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.wide-image img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 16px 36px rgba(51, 41, 31, 0.15);
+}
+
+.image-caption {
+  max-width: 800px;
+  margin: 1rem auto 0;
+  font-size: 0.95rem;
+  color: var(--earth);
+  font-style: italic;
+  line-height: 1.7;
 }
 
 .education-grid {
@@ -62,16 +90,16 @@
   color: var(--forest);
 }
 
-.swarm-section,
-.plant-section,
-.future-classes {
-  text-align: center;
-  max-width: 900px;
+.products-section {
+  background: #fffdf7;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 12px 28px rgba(51, 41, 31, 0.08);
 }
 
-.swarm-section p,
-.future-classes p {
-  font-size: 1.1rem;
+.coming-soon {
+  font-weight: bold;
+  color: var(--deep-honey);
 }
 
 .plant-grid {
@@ -134,27 +162,6 @@
 .resource-card h3 {
   color: var(--deep-honey);
   margin-top: 0;
-}
-
-.wide-image {
-  max-width: 950px;
-  margin: 3rem auto;
-  text-align: center;
-}
-
-.wide-image img {
-  width: 100%;
-  border-radius: 24px;
-  box-shadow: 0 16px 36px rgba(51, 41, 31, 0.15);
-}
-
-.image-caption {
-  max-width: 800px;
-  margin: 1rem auto 0;
-  font-size: 0.95rem;
-  color: var(--earth);
-  font-style: italic;
-  line-height: 1.7;
 }
 
 @media (max-width: 850px) {
