@@ -208,14 +208,26 @@ footer p {
   text-align: center;
 }
 
-.footer-links,
-.footer-social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 1rem auto;
+.footer-links a,
+.footer-social a {
+  color: var(--soft-gold);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+.footer-links a:visited,
+.footer-social a:visited {
+  color: var(--soft-gold);
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  background: rgba(243, 223, 172, 0.12);
+  color: white;
+  transform: translateY(-2px);
 }
 
 #copyright {
