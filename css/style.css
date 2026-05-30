@@ -210,24 +210,30 @@ footer p {
 
 .footer-links a,
 .footer-social a {
-  color: var(--soft-gold);
+  color: #f0d8a0;
   text-decoration: none;
-  font-weight: bold;
-  padding: 0.4rem 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.5rem;
   border-radius: 999px;
-  transition: all 0.25s ease;
-}
-
-.footer-links a:visited,
-.footer-social a:visited {
-  color: var(--soft-gold);
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .footer-links a:hover,
 .footer-social a:hover {
+  color: #fff6df;
   background: rgba(243, 223, 172, 0.12);
-  color: white;
   transform: translateY(-2px);
+}
+
+footer a[href^="mailto"] {
+  color: #f0d8a0;
+}
+
+footer a[href^="mailto"]:hover {
+  color: #fff6df;
 }
 
 #copyright {
