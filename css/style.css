@@ -41,3 +41,12 @@
       color: var(--soft-gold);
     }
 
+ .eyebrow {
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--forest);
+      font-weight: 800;
+      font-size: 0.8rem;
+      margin-bottom: 0.75rem;
+    }
