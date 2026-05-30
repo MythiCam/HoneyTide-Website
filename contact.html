@@ -69,14 +69,13 @@
       and non-urgent swarm questions.
     </p>
 
-    <a class="button button-primary"
-       href="mailto:honeytideapiary@gmail.com?subject=HoneyTide%20Apiary%20Inquiry">
-      Email HoneyTide
-    </a>
-
-    <p class="contact-direct">
+    <p class="contact-email" id="honeytide-email">
       honeytideapiary@gmail.com
     </p>
+
+    <button class="button button-primary" onclick="copyEmail()">
+      Copy Email Address
+    </button>
   </article>
 
   <article class="contact-card primary-contact">
@@ -90,7 +89,7 @@
        href="https://www.facebook.com/HoneyTideApiary"
        target="_blank"
        rel="noopener noreferrer">
-      Message on Facebook
+      Message HoneyTide
     </a>
   </article>
 
@@ -102,10 +101,10 @@
       trees, branches, fences, shrubs, or open outdoor spaces.
     </p>
 
-    <a class="button button-primary"
-       href="mailto:honeytideapiary@gmail.com?subject=Swarm%20Help%20Request">
-      Email About a Swarm
-    </a>
+    <p class="small-note">
+      For structural removals inside walls, roofs, buildings, or major property
+      structures, please contact a professional bee removal service.
+    </p>
 
     <a class="button button-secondary"
        href="https://www.orsba.org/report-a-swarm"
@@ -119,8 +118,7 @@
     <h2>Bee Questions & Resources</h2>
     <p>
       Not sure what you found? Curious about pollinators, beginner beekeeping,
-      native bees, or future classes? Reach out — HoneyTide is happy to help
-      where we can.
+      native bees, or future classes? HoneyTide is happy to help where we can.
     </p>
 
     <a class="button button-secondary" href="education.html">
@@ -202,5 +200,12 @@ document.getElementById("copyright").innerHTML =
   " HoneyTide Apiary. All Rights Reserved.";
 </script>
 
+  <script>
+function copyEmail() {
+  navigator.clipboard.writeText("honeytideapiary@gmail.com");
+  alert("HoneyTide email copied!");
+}
+</script>
+  
 </body>
 </html>
