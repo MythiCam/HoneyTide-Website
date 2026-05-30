@@ -1,0 +1,384 @@
+ <style>
+    :root {
+      --honey: #c8891f;
+      --deep-honey: #9f6414;
+      --forest: #35583a;
+      --earth: #33291f;
+      --cream: #fbf7ed;
+      --white: #ffffff;
+      --soft-gold: #f3dfac;
+      --border: #eadcc1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--earth);
+      background: var(--cream);
+      line-height: 1.65;
+    }
+
+    nav {
+  background: var(--earth);
+  text-align: center;
+  padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: var(--soft-gold);
+    }
+
+   .hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 4rem 1.5rem;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
+  color: white;
+}
+
+.hero-content h1 {
+  color: white;
+}
+
+.hero-content p {
+  color: white;
+}
+
+.hero-content .eyebrow {
+  color: #f3dfac;
+}
+
+.hero-content .slogan {
+  color: #f3dfac;
+}
+
+    .hero-logo {
+  width: min(500px, 90vw);
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 14px 24px rgba(51, 41, 31, 0.22));
+}
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--forest);
+      font-weight: 800;
+      font-size: 0.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 5vw, 4rem);
+      line-height: 1.1;
+      max-width: 940px;
+      margin: 0 auto 1rem;
+    }
+
+    .slogan {
+      color: var(--deep-honey);
+      font-style: italic;
+      font-size: 1.35rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 1.8rem;
+      font-size: 1.12rem;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1.2rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 215px;
+      padding: 0.85rem 1.35rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .button-primary {
+      background: var(--honey);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--deep-honey);
+    }
+
+    .button-secondary {
+      border: 2px solid var(--forest);
+      color: var(--forest);
+      background: transparent;
+    }
+
+    .button-secondary:hover {
+      background: var(--forest);
+      color: white;
+    }
+
+    .hero-button {
+  border-color: white;
+  color: white;
+    }
+
+    .hero-button:hover {
+  background: white;
+  color: var(--forest);
+    }
+    
+    section {
+      max-width: 1120px;
+      margin: auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .text-block {
+      max-width: 540px;
+      margin: auto;
+    }
+
+    .section-kicker {
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+      color: var(--deep-honey);
+      font-size: 0.8rem;
+      margin-bottom: 0.6rem;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      color: var(--forest);
+      margin: 0 0 1rem;
+    }
+
+    .image-card {
+      background: white;
+      padding: 0.75rem;
+      border-radius: 24px;
+      box-shadow: 0 16px 36px rgba(51, 41, 31, 0.13);
+      max-width: 520px;
+      margin: auto;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .quote-box {
+      background: white;
+      border-left: 6px solid var(--honey);
+      padding: 1.35rem;
+      border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(51, 41, 31, 0.08);
+      margin-top: 1.3rem;
+      font-size: 1.08rem;
+    }
+
+    .pillars {
+      background: var(--earth);
+      max-width: none;
+      color: white;
+      padding: 0;
+    }
+
+    .pillars-inner {
+      max-width: 1120px;
+      margin: auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .pillars h2 {
+      color: white;
+      text-align: center;
+    }
+
+    .pillars-intro {
+      max-width: 760px;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .pillar-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 20px;
+      padding: 1.6rem;
+    }
+
+    .pillar-card h3 {
+      color: var(--soft-gold);
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+
+  .apiary {
+  background: #fffdf7;
+  max-width: none;
+  padding: 0;
+}
+
+.apiary-inner {
+  max-width: 1120px;
+  margin: auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.section-intro {
+  max-width: 820px;
+  margin: 0 auto 1rem;
+}
+
+.hero-apiary-image {
+  max-width: 850px;
+  margin: 2.5rem auto;
+  background: white;
+  padding: 0.75rem;
+  border-radius: 24px;
+  box-shadow: 0 16px 36px rgba(51, 41, 31, 0.13);
+}
+
+.hero-apiary-image img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+
+.colony-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.colony {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.5rem;
+}
+
+.colony h3 {
+  color: var(--deep-honey);
+  margin: 0 0 0.5rem;
+}
+
+    .vision {
+      text-align: center;
+      max-width: 900px;
+    }
+
+    footer {
+      background: var(--earth);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    footer img {
+      width: 105px;
+      max-width: 45vw;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 850px) {
+      nav a {
+        display: block;
+        margin: 0.45rem 0;
+      }
+
+      .two-column,
+      .pillar-grid,
+      .colony-list {
+        grid-template-columns: 1fr;
+      }
+
+      .text-block {
+        max-width: 100%;
+      }
+
+      section,
+      .pillars-inner,
+      .apiary-inner {
+        padding: 3rem 1.2rem;
+      }
+
+      .button {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
