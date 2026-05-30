@@ -1,1 +1,149 @@
+.education-hero {
+  text-align: center;
+  padding: 5rem 1.5rem;
+  background:
+    linear-gradient(rgba(51, 41, 31, 0.72), rgba(51, 41, 31, 0.72)),
+    url("../images/camron-fieldwork.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
 
+.education-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.05;
+  max-width: 900px;
+  margin: 0 auto 1rem;
+}
+
+.education-hero p {
+  max-width: 760px;
+  margin: auto;
+  font-size: 1.15rem;
+}
+
+.education-hero .eyebrow {
+  color: var(--soft-gold);
+}
+
+.education-intro {
+  text-align: center;
+  max-width: 900px;
+}
+
+.education-intro p {
+  font-size: 1.1rem;
+}
+
+.education-grid {
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+}
+
+.education-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 12px 28px rgba(51, 41, 31, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(51, 41, 31, 0.12);
+}
+
+.education-card h2 {
+  color: var(--forest);
+}
+
+.swarm-section,
+.plant-section,
+.future-classes {
+  text-align: center;
+  max-width: 900px;
+}
+
+.swarm-section p,
+.future-classes p {
+  font-size: 1.1rem;
+}
+
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.plant-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 28px rgba(51, 41, 31, 0.08);
+}
+
+.plant-card h3 {
+  color: var(--deep-honey);
+}
+
+.resource-section {
+  max-width: 1120px;
+  text-align: center;
+}
+
+.resource-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.resource-card {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1.6rem;
+  text-align: left;
+  text-decoration: none;
+  color: var(--earth);
+  box-shadow: 0 12px 28px rgba(51, 41, 31, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.resource-card:visited {
+  color: var(--earth);
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(51, 41, 31, 0.12);
+  border-color: var(--honey);
+}
+
+.resource-card h3 {
+  color: var(--deep-honey);
+  margin-top: 0;
+}
+
+@media (max-width: 850px) {
+  .education-hero {
+    padding: 4rem 1.2rem;
+  }
+
+  .education-grid,
+  .resource-list,
+  .plant-grid {
+    grid-template-columns: 1fr;
+  }
+}
