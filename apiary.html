@@ -1,29 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Our Apiary | HoneyTide Apiary</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Apiary | HoneyTide Apiary</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/apiary.css">
 </head>
+
 <body>
 
-<h1>Our Apiary</h1>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="apiary.html">Our Apiary</a>
+  <a href="education.html">Education</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-<p>
-Follow the growth of HoneyTide Apiary through seasonal updates, colony
-management, swarm captures, and milestones throughout the beekeeping year.
-</p>
+<header class="apiary-page-hero">
+  <div class="eyebrow">Our Apiary</div>
+  <h1>Every Colony Has a Story</h1>
+  <p>
+    Follow the growth of HoneyTide Apiary through colony updates, swarm captures,
+    seasonal milestones, and the lessons each hive teaches along the way.
+  </p>
+</header>
 
-<h2>Current Colonies</h2>
+<section class="apiary-intro">
+  <h2>Meet the Colonies</h2>
+  <p>
+    HoneyTide is built one colony, one inspection, and one season at a time.
+    Each hive has its own rhythm, temperament, challenges, and lessons. Together,
+    they tell the living story of HoneyTide’s growth as a young Oregon apiary.
+  </p>
+</section>
 
-<ul>
-    <li>Zion</li>
-    <li>Tortooga</li>
-    <li>Butera</li>
-</ul>
+<section class="colony-profile-grid">
 
-<p>
-Additional colonies and apiary updates will be documented here as the
-operation continues to grow.
-</p>
+  <article class="colony-profile">
+    <h2>Zion</h2>
+    <p class="colony-label">Founding Colony</p>
+    <p>
+      Zion is one of HoneyTide’s founding colonies and has become a cornerstone
+      of the apiary’s early growth. With strong brood production, steady comb
+      building, and healthy expansion, Zion has helped shape HoneyTide’s
+      understanding of strength, timing, and responsible colony management.
+    </p>
+    <p>
+      As one of the strongest early hives, Zion continues to serve as both a
+      productive colony and an important teacher in the apiary.
+    </p>
+  </article>
+
+  <article class="colony-profile">
+    <h2>Tortooga</h2>
+    <p class="colony-label">Founding Colony</p>
+    <p>
+      Tortooga has been a colony of patience, observation, and careful management.
+      While slower to develop than Zion, this hive continues to offer valuable
+      lessons in resource balance, brood development, and the importance of
+      listening closely to what each colony is showing.
+    </p>
+    <p>
+      Tortooga reminds HoneyTide that every hive grows in its own time and that
+      good stewardship requires attention, humility, and care.
+    </p>
+  </article>
+
+  <article class="colony-profile">
+    <h2>Butera</h2>
+    <p class="colony-label">Captured Swarm</p>
+    <p>
+      Named after the family whose property hosted the swarm, Butera represents
+      HoneyTide’s first successful swarm capture and relocation. What began as a
+      cluster of bees gathered on a branch became an opportunity to preserve a
+      colony and provide it with a permanent home.
+    </p>
+    <p>
+      Butera is a reminder that healthy colonies continue to spread, adapt, and
+      grow — and that beekeeping often begins by paying attention when nature
+      presents an opportunity.
+    </p>
+  </article>
+
+  <article class="colony-profile">
+    <h2>The Anchor Colony</h2>
+    <p class="colony-label">Swarm Recovery</p>
+    <p>
+      Originally discovered living inside a mailbox anchor, this colony became
+      one of HoneyTide’s most memorable rescues. Their relocation reflects both
+      the resilience of honey bees and the importance of providing safe homes for
+      pollinators when they establish themselves in spaces shared with people.
+    </p>
+    <p>
+      What began as an unusual removal quickly became an opportunity to preserve
+      a healthy colony while helping a local family and expanding HoneyTide’s
+      experience with swarm recovery and colony relocation.
+    </p>
+  </article>
+
+</section>
+
+<section class="seasonal-story">
+  <div class="section-kicker">2026 Season</div>
+  <h2>A Young Apiary Taking Shape</h2>
+
+  <p>
+    The 2026 season marks HoneyTide’s first major year of growth. From founding
+    colonies to swarm captures and hands-on learning, this season is helping
+    define the practices, values, and rhythm of the apiary.
+  </p>
+
+  <p>
+    Future updates will document inspections, seasonal changes, colony growth,
+    management decisions, and the ongoing lessons that come from working closely
+    with bees.
+  </p>
+</section>
+
+<footer>
+  <a href="index.html">
+    <img src="images/logo.png" alt="HoneyTide Apiary logo">
+  </a>
+
+  <h3>HoneyTide Apiary</h3>
+
+  <p><em>Nature's Rhythm. A Bee's Blessing.</em></p>
+
+  <p class="footer-mission">
+    Working to strengthen the relationship between people,
+    pollinators, and the natural world through stewardship,
+    education, and sustainable beekeeping practices.
+  </p>
+
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="apiary.html">Our Apiary</a>
+    <a href="education.html">Education</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="footer-social">
+    <a href="https://www.facebook.com/HoneyTideApiary" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a href="https://www.youtube.com/@HoneyTideApiary" target="_blank" rel="noopener noreferrer">YouTube</a>
+  </div>
+
+  <p>
+    Springfield, Oregon<br>
+    <a href="mailto:honeytideapiary@gmail.com">honeytideapiary@gmail.com</a>
+  </p>
+
+  <p id="copyright"></p>
+</footer>
+
+<script>
+document.getElementById("copyright").innerHTML =
+  "&copy; " +
+  new Date().getFullYear() +
+  " HoneyTide Apiary. All Rights Reserved.";
+</script>
 
 </body>
 </html>
