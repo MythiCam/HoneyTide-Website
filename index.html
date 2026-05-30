@@ -248,14 +248,58 @@
 </section>
 
 <footer>
-  <img src="images/logo.png" alt="HoneyTide Apiary logo">
+  <a href="index.html">
+    <img src="images/logo.png" alt="HoneyTide Apiary logo">
+  </a>
+
   <h3>HoneyTide Apiary</h3>
-  <p>Nature's Rhythm. A Bee's Blessing.</p>
+
+  <p><em>Nature's Rhythm. A Bee's Blessing.</em></p>
+
+  <p class="footer-mission">
+    Working to strengthen the relationship between people,
+    pollinators, and the natural world through stewardship,
+    education, and sustainable beekeeping practices.
+  </p>
+
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="apiary.html">Our Apiary</a>
+    <a href="education.html">Education</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="footer-social">
+    <a href="https://www.facebook.com/HoneyTideApiary"
+       target="_blank"
+       rel="noopener noreferrer">
+       Facebook
+    </a>
+
+    <a href="https://www.youtube.com/@HoneyTideApiary"
+       target="_blank"
+       rel="noopener noreferrer">
+       YouTube
+    </a>
+  </div>
+
   <p>
     Springfield, Oregon<br>
-    honeytideapiary@gmail.com
+    <a href="mailto:honeytideapiary@gmail.com">
+      honeytideapiary@gmail.com
+    </a>
   </p>
+
+  <p id="copyright"></p>
 </footer>
+
+<script>
+document.getElementById("copyright").innerHTML =
+  "&copy; " +
+  new Date().getFullYear() +
+  " HoneyTide Apiary. All Rights Reserved.";
+</script>
 
 </body>
 </html>
