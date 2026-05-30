@@ -99,7 +99,27 @@ h2 {
   font-family: Arial, sans-serif;
   font-weight: bold;
   text-align: center;
-  transition: all 0.25s ease;
+
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
 }
 
 .button-primary {
@@ -109,7 +129,6 @@ h2 {
 
 .button-primary:hover {
   background: var(--deep-honey);
-  transform: translateY(-2px);
 }
 
 .button-secondary {
@@ -121,7 +140,6 @@ h2 {
 .button-secondary:hover {
   background: var(--forest);
   color: white;
-  transform: translateY(-2px);
 }
 
 .hero-button {
