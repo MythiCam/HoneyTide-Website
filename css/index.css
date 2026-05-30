@@ -213,3 +213,20 @@
       text-align: center;
       max-width: 900px;
     }
+
+@media (max-width: 850px) {
+  .two-column,
+  .pillar-grid,
+  .colony-list {
+    grid-template-columns: 1fr;
+  }
+
+  .text-block {
+    max-width: 100%;
+  }
+
+  .pillars-inner,
+  .apiary-inner {
+    padding: 3rem 1.2rem;
+  }
+}
