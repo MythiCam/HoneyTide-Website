@@ -1,4 +1,3 @@
-  <style>
     :root {
       --honey: #c8891f;
       --deep-honey: #9f6414;
@@ -143,3 +142,9 @@
         display: block;
         margin: 0.45rem 0;
       }
+
+ .button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
