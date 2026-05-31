@@ -263,6 +263,19 @@ Potential future pages:
 - Do not invent affiliations, certifications, or services.
 - Do not make product availability claims beyond “future” or “coming soon” unless explicitly stated.
 
+## Repository Editing Rules
+
+Before modifying files:
+
+1. Read PROJECT_NOTES.md.
+2. Review the current repository state.
+3. Assume manually edited text is intentional.
+4. Do not rewrite sections unless specifically requested.
+5. Propose major copy changes before implementation.
+6. Preserve working media, links, analytics, SEO, favicon, sitemap, and robots configuration.
+7. Prefer incremental improvements over full rewrites.
+8. When in doubt, ask before replacing content.
+
 ## Workflow Instructions for Codex
 
 Before editing files:
