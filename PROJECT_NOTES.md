@@ -54,6 +54,30 @@ Prefer:
 - I hope to offer...
 - The bees are teaching me...
 
+  ## Voice Rules
+
+HoneyTide is a sole proprietor business.
+
+Preferred:
+- Camron
+- I
+- My apiary
+- The apiary
+- The colonies
+
+Use HoneyTide Apiary when:
+- Introducing the business
+- Branding references
+- SEO-sensitive headings
+- Legal/business identification
+
+Avoid:
+- "HoneyTide is committed to..."
+- "HoneyTide believes..."
+- "We welcome..."
+- "Our organization..."
+- Language that sounds institutional or corporate.
+
 ## Important Factual Corrections
 
 - Camron is enrolled in the OSU Master Beekeeper Apprentice Program.
