@@ -21,25 +21,6 @@
       line-height: 1.7;
     }
 
-    nav {
-      background: var(--earth);
-      text-align: center;
-      padding: 1rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      font-size: 0.95rem;
-    }
-
-    nav a:hover {
-      color: var(--soft-gold);
-    }
-
     .about-hero {
       max-width: 1180px;
       margin: auto;
@@ -177,10 +158,6 @@
 
 
     @media (max-width: 850px) {
-      nav a {
-        display: block;
-        margin: 0.45rem 0;
-      }
 
       .about-hero,
       .value-grid {

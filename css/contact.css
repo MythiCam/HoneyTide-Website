@@ -118,13 +118,6 @@
   box-shadow: 0 12px 28px rgba(51, 41, 31, 0.08);
 }
 
- .contact-direct {
-  margin-top: 1rem;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  color: var(--deep-honey);
-  word-break: break-word;
-}
 
 .primary-contact {
   border-top: 5px solid var(--honey);
@@ -165,4 +158,12 @@
   .checklist-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.copy-status {
+  min-height: 1.5rem;
+  margin: 0.75rem 0 0;
+  color: var(--forest);
+  font-family: Arial, sans-serif;
+  font-weight: bold;
 }
