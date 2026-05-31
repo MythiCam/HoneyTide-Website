@@ -28,7 +28,6 @@
 
 .education-intro,
 .learning-section,
-.products-section,
 .plant-section,
 .education-close {
   text-align: center;
@@ -37,7 +36,6 @@
 
 .education-intro p,
 .learning-section p,
-.products-section p,
 .education-close p {
   font-size: 1.1rem;
 }
@@ -90,16 +88,48 @@
   color: var(--forest);
 }
 
-.products-section {
-  background: #fffdf7;
+
+.learning-path-section {
+  max-width: 1120px;
+  text-align: center;
+}
+
+.learning-path-section > p {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+}
+
+.learning-path-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.learning-path-card {
+  background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: 22px;
+  padding: 1.5rem;
+  text-align: left;
   box-shadow: 0 12px 28px rgba(51, 41, 31, 0.08);
 }
 
-.coming-soon {
-  font-weight: bold;
+.learning-path-card h3 {
   color: var(--deep-honey);
+  margin-top: 0;
+}
+
+.affiliation-note,
+.resource-note {
+  max-width: 850px;
+  margin: 1.5rem auto 0;
+  font-size: 0.95rem;
+  color: var(--earth);
+  font-style: italic;
+  line-height: 1.7;
 }
 
 .plant-grid {
@@ -170,6 +200,7 @@
   }
 
   .education-grid,
+  .learning-path-grid,
   .resource-list,
   .plant-grid {
     grid-template-columns: 1fr;
