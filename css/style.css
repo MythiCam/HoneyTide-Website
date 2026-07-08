@@ -220,7 +220,8 @@ footer {
 
 footer img {
   width: 120px;
-  max-width: 45vw;
+  max-width: min(120px, 45vw);
+  height: auto;
   margin-bottom: 1rem;
   transition: transform 0.25s ease;
 }
