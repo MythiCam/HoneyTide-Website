@@ -24,6 +24,7 @@
   <meta property="og:title" content="Contact HoneyTide Apiary">
   <meta property="og:description" content="Contact HoneyTide Apiary in the Springfield/Eugene area for honey bee questions, swarm information, pollinator resources, or future education opportunities.">
   <meta property="og:image" content="https://honeytideapiary.com/images/logo.png">
+  <meta property="og:image:alt" content="HoneyTide Apiary logo">
   <meta property="og:url" content="https://honeytideapiary.com/contact.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="HoneyTide Apiary">
@@ -32,6 +33,7 @@
   <meta name="twitter:title" content="Contact HoneyTide Apiary">
   <meta name="twitter:description" content="Contact HoneyTide Apiary in the Springfield/Eugene area for honey bee questions, swarm information, pollinator resources, or future education opportunities.">
   <meta name="twitter:image" content="https://honeytideapiary.com/images/logo.png">
+  <meta name="twitter:image:alt" content="HoneyTide Apiary logo">
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/contact.css">
@@ -199,7 +201,7 @@
 
 <footer>
   <a href="index.html" aria-label="HoneyTide Apiary home">
-    <img src="images/logo.png" alt="HoneyTide Apiary logo">
+    <img src="images/logo.png" alt="HoneyTide Apiary logo" width="1000" height="1000" loading="lazy" decoding="async">
   </a>
 
   <h2 class="footer-title">HoneyTide Apiary</h2>
@@ -218,6 +220,7 @@
     <a href="apiary.html">Our Apiary</a>
     <a href="education.html">Education</a>
     <a href="contact.html" aria-current="page">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
   </div>
 
   <div class="footer-social" aria-label="Social links">
@@ -241,9 +244,35 @@ document.getElementById("copyright").innerHTML =
 </script>
 
   <script>
-function copyEmail() {
-  navigator.clipboard.writeText("honeytideapiary@gmail.com");
-  document.getElementById("copy-status").textContent = "Email address copied.";
+async function copyEmail() {
+  const email = "honeytideapiary@gmail.com";
+  const status = document.getElementById("copy-status");
+
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(email);
+    } else {
+      const helper = document.createElement("textarea");
+      try {
+        helper.value = email;
+        helper.setAttribute("readonly", "");
+        helper.style.position = "fixed";
+        helper.style.left = "-9999px";
+        document.body.appendChild(helper);
+        helper.select();
+
+        if (!document.execCommand("copy")) {
+          throw new Error("Copy command was not available.");
+        }
+      } finally {
+        helper.remove();
+      }
+    }
+
+    status.textContent = "Email address copied.";
+  } catch (error) {
+    status.textContent = "Copy did not work in this browser. Please select and copy honeytideapiary@gmail.com.";
+  }
 }
 </script>
   

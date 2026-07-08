@@ -1,5 +1,5 @@
 :root {
-  --honey: #c8891f;
+  --honey: #8f5b12;
   --deep-honey: #9f6414;
   --forest: #35583a;
   --earth: #33291f;
@@ -277,6 +277,20 @@ footer p {
   transform: translateY(-2px);
 }
 
+.footer-privacy {
+  margin: 0.6rem auto 0;
+}
+
+.footer-privacy a {
+  color: #f0d8a0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-privacy a:hover {
+  color: #fff6df;
+}
+
 footer a[href^="mailto"] {
   color: #f0d8a0;
 }
@@ -333,5 +347,15 @@ footer a[href^="mailto"]:hover {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  video {
+    animation: none !important;
+  }
+
+  .hero-video,
+  .contact-video,
+  .colony-video {
+    display: none;
   }
 }
