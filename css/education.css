@@ -3,7 +3,10 @@
   padding: 5rem 1.5rem;
   background:
     linear-gradient(rgba(51, 41, 31, 0.58), rgba(51, 41, 31, 0.58)),
-    url("../images/bumble1.jpg");
+    image-set(
+      url("../images/bumble1-1600.webp") type("image/webp"),
+      url("../images/bumble1.jpg") type("image/jpeg")
+    );
   background-size: cover;
   background-position: center;
   color: white;

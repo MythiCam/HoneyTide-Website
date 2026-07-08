@@ -24,6 +24,10 @@
   z-index: 0;
 }
 
+.contact-hero-static {
+  background: url("../images/zion2-900.webp") center / cover;
+}
+
 .contact-overlay {
   position: absolute;
   inset: 0;
