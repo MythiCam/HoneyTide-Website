@@ -1,294 +1,37 @@
-   .hero {
-  position: relative;
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  padding: 4rem 1.5rem;
-}
-
-.hero-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(20, 20, 20, 0.45);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 950px;
-  color: white;
-}
-
-.hero-content h1 {
-  color: white;
-}
-
-.hero-content p {
-  color: white;
-}
-
-.hero-content .eyebrow {
-  color: #f3dfac;
-}
-
-.hero-content .slogan {
-  color: #f3dfac;
-}
-
-    .hero-logo {
-  width: min(500px, 90vw);
-  height: auto;
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0 14px 24px rgba(51, 41, 31, 0.22));
-}
-
-    .hero h1 {
-      font-size: clamp(2.1rem, 5vw, 4rem);
-      line-height: 1.1;
-      max-width: 940px;
-      margin: 0 auto 1rem;
-    }
-
-    .slogan {
-      color: var(--deep-honey);
-      font-style: italic;
-      font-size: 1.35rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto 1.8rem;
-      font-size: 1.12rem;
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .text-block {
-      max-width: 540px;
-      margin: auto;
-    }
-
-    .image-card {
-      background: white;
-      padding: 0.75rem;
-      border-radius: 24px;
-      box-shadow: 0 16px 36px rgba(51, 41, 31, 0.13);
-      max-width: 520px;
-      margin: auto;
-    }
-
-    .image-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 18px;
-    }
-
-    .quote-box {
-      background: white;
-      border-left: 6px solid var(--honey);
-      padding: 1.35rem;
-      border-radius: 14px;
-      box-shadow: 0 10px 24px rgba(51, 41, 31, 0.08);
-      margin-top: 1.3rem;
-      font-size: 1.08rem;
-    }
-
-.credential-note {
-  font-family: Arial, sans-serif;
-  font-size: 0.95rem;
-  font-weight: bold;
-  color: var(--deep-honey);
-}
-
-.section-button-row {
-  justify-content: flex-start;
-}
-
-    .pillars {
-      background: var(--earth);
-      max-width: none;
-      color: white;
-      padding: 0;
-    }
-
-    .pillars-inner {
-      max-width: 1120px;
-      margin: auto;
-      padding: 4rem 1.5rem;
-    }
-
-    .pillars h2 {
-      color: white;
-      text-align: center;
-    }
-
-    .pillars-intro {
-      max-width: 760px;
-      margin: 0 auto 2rem;
-      text-align: center;
-    }
-
-    .pillar-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
-
-    .pillar-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.16);
-      border-radius: 20px;
-      padding: 1.6rem;
-    }
-
-    .pillar-card h3 {
-      color: var(--soft-gold);
-      margin-top: 0;
-      font-size: 1.25rem;
-    }
-
-  .apiary {
-  background: #fffdf7;
-  max-width: none;
-  padding: 0;
-}
-
-.apiary-inner {
-  max-width: 1120px;
-  margin: auto;
-  padding: 4rem 1.5rem;
-  text-align: center;
-}
-
-.section-intro {
-  max-width: 820px;
-  margin: 0 auto 1rem;
-}
-
-.hero-apiary-image {
-  max-width: 850px;
-  margin: 2.5rem auto;
-  background: white;
-  padding: 0.75rem;
-  border-radius: 24px;
-  box-shadow: 0 16px 36px rgba(51, 41, 31, 0.13);
-}
-
-.hero-apiary-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 18px;
-}
-
-.colony-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.4rem;
-  margin-top: 2rem;
-  text-align: left;
-}
-
-.colony {
-  background: var(--cream);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 1.5rem;
-}
-
-.colony h3 {
-  color: var(--deep-honey);
-  margin: 0 0 0.5rem;
-}
-
-.vision,
-.beyond-hive {
-  text-align: center;
-  max-width: 900px;
-}
-
-.products-preview {
-  text-align: center;
-  max-width: 1120px;
-}
-
-.products-preview > p {
-  max-width: 780px;
-  margin: 0 auto 2rem;
-  font-size: 1.1rem;
-}
-
-.product-preview-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  margin-top: 2rem;
-}
-
-.product-preview-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 1.6rem;
-  box-shadow: 0 12px 28px rgba(51, 41, 31, 0.08);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.product-preview-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 34px rgba(51, 41, 31, 0.12);
-}
-
-.product-preview-card h3 {
-  color: var(--deep-honey);
-  margin-top: 0;
-}
-
-.products-note {
-  margin-top: 2rem;
-  font-weight: bold;
-  color: var(--deep-honey);
-}
-
-@media (max-width: 850px) {
-  .two-column,
-  .pillar-grid,
-  .colony-list {
-    grid-template-columns: 1fr;
-  }
-
-   .product-preview-grid {
-  grid-template-columns: 1fr;
-}
-   
-  .text-block {
-    max-width: 100%;
-  }
-
-  .pillars-inner,
-  .apiary-inner {
-    padding: 3rem 1.2rem;
-  }
+/* A photograph-led homepage, grounded in the shared nature palette. */
+.home-intro { max-width: 1360px; margin: auto; display: grid; grid-template-columns: 1fr 1.12fr; gap: 3rem; padding: 4rem 2rem; align-items: center; }
+.home-intro h1 { color: var(--forest); font-size: clamp(3rem,5.5vw,5.6rem); font-weight: normal; line-height: 1.03; margin: 1.3rem 0; letter-spacing: -.035em; }
+.home-intro-copy > p:not(.eyebrow) { max-width: 470px; font-size: 1.12rem; }
+.slogan { color: var(--deep-honey); font-style: italic; }
+figure { margin: 0; }
+.home-intro-photo img { width: 100%; height: 540px; object-fit: cover; border-radius: 50% 50% 5px 5px; }
+figcaption { margin-top: .6rem; font-size: .9rem; color: var(--moss); font-style: italic; }
+.button-row { justify-content: flex-start; align-items: center; gap: 1.25rem; }
+.text-link { color: var(--forest); text-decoration-thickness: 1px; text-underline-offset: 5px; font-weight: bold; }
+.text-link:hover { text-decoration-thickness: 2px; }
+h2 { font-weight: normal; letter-spacing: -.025em; }
+h3 { color: var(--forest); font-size: 1.55rem; font-weight: normal; margin: 1.1rem 0 .5rem; }
+.beekeeper-section { display: grid; grid-template-columns: .8fr 1fr; gap: 5rem; align-items: center; border-top: 1px solid var(--border); }
+.beekeeper-section img { width: 100%; height: 440px; object-fit: cover; border-radius: 5px; }
+.beekeeper-section p { max-width: 540px; }
+.field-section { background: var(--sage); max-width: none; padding: 4rem max(1.5rem,calc((100% - 1072px)/2)); }
+.field-heading { display: flex; align-items: end; gap: 2rem; justify-content: space-between; margin-bottom: 2rem; }
+.field-heading h2 { max-width: 620px; }
+.field-heading > a { white-space: nowrap; margin-bottom: 1rem; }
+.field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.field-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 4px; }
+.field-grid p { max-width: 470px; }
+.hive-goods { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding-top: 5rem; padding-bottom: 5rem; border-bottom: 1px solid var(--border); }
+.hive-goods h2 { font-size: clamp(2.4rem,4vw,3.5rem); }
+.home-contact { text-align: center; max-width: 800px; }
+.home-contact .button-row { justify-content: center; }
+@media(max-width: 850px) {
+ .home-intro { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 1.25rem; }
+ .home-intro-photo img { height: 360px; border-radius: 6px; }
+ .beekeeper-section, .field-grid, .hive-goods { grid-template-columns: 1fr; gap: 2rem; }
+ .beekeeper-section img { height: 380px; }
+ .field-heading { display: block; }
+ .field-grid { gap: 3rem; }
+ .field-grid img { height: 300px; }
+ .hive-goods { padding-top: 3rem; padding-bottom: 3rem; }
 }
