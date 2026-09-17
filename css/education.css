@@ -48,7 +48,7 @@
 
 .wide-image img {
   width: 100%;
-  border-radius: 24px;
+  border-radius: 6px;
   box-shadow: 0 16px 36px rgba(51, 41, 31, 0.15);
 }
 
@@ -71,7 +71,7 @@
 .education-card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: 6px;
   padding: 2rem;
   box-shadow: 0 12px 28px rgba(51, 41, 31, 0.08);
   transition:
@@ -80,7 +80,7 @@
 }
 
 .education-card:hover {
-  transform: translateY(-4px);
+  transform: none;
   box-shadow: 0 18px 34px rgba(51, 41, 31, 0.12);
 }
 
@@ -111,7 +111,7 @@
 .learning-path-card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 22px;
+  border-radius: 6px;
   padding: 1.5rem;
   text-align: left;
   box-shadow: 0 12px 28px rgba(51, 41, 31, 0.08);
@@ -142,7 +142,7 @@
 .plant-card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 22px;
+  border-radius: 6px;
   padding: 1.5rem;
   box-shadow: 0 12px 28px rgba(51, 41, 31, 0.08);
 }
@@ -167,7 +167,7 @@
   display: block;
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: 6px;
   padding: 1.6rem;
   text-align: left;
   text-decoration: none;
@@ -184,7 +184,7 @@
 }
 
 .resource-card:hover {
-  transform: translateY(-4px);
+  transform: none;
   box-shadow: 0 18px 34px rgba(51, 41, 31, 0.12);
   border-color: var(--honey);
 }

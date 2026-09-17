@@ -1,6 +1,7 @@
 .contact-hero {
   position: relative;
-  min-height: 65vh;
+  min-height: 0;
+  background: var(--sage);
 
   display: flex;
   align-items: center;
@@ -28,7 +29,7 @@
   position: absolute;
   inset: 0;
 
-  background: rgba(51, 41, 31, 0.62);
+  background: transparent;
 
   z-index: 1;
 }
@@ -38,19 +39,19 @@
   z-index: 2;
 
   max-width: 900px;
-  color: white;
+  color: var(--forest);
 }
 
 .contact-content h1 {
-  color: white;
+  color: var(--forest);
 }
 
 .contact-content p {
-  color: white;
+  color: var(--forest);
 }
 
 .contact-content .eyebrow {
-  color: var(--soft-gold);
+  color: var(--forest);
 }
 
 .contact-intro,
@@ -75,7 +76,7 @@
 .contact-card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: 6px;
   padding: 2rem;
   text-align: center;
   box-shadow: 0 12px 28px rgba(51, 41, 31, 0.08);
@@ -85,7 +86,7 @@
 }
 
 .contact-card:hover {
-  transform: translateY(-4px);
+  transform: none;
   box-shadow: 0 18px 34px rgba(51, 41, 31, 0.12);
 }
 
@@ -103,7 +104,7 @@
 .checklist-item {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 6px;
   padding: 0.85rem 1rem;
   font-family: Arial, sans-serif;
   font-weight: bold;
@@ -114,7 +115,7 @@
 .friendly-note {
   background: #fffdf7;
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: 6px;
   box-shadow: 0 12px 28px rgba(51, 41, 31, 0.08);
 }
 
@@ -166,4 +167,8 @@
   color: var(--forest);
   font-family: Arial, sans-serif;
   font-weight: bold;
+}
+
+@media (max-width: 850px) {
+  .contact-card .button { min-width: 0; max-width: 100%; width: 100%; margin: .45rem 0; }
 }
