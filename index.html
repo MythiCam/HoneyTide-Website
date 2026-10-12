@@ -36,20 +36,29 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/woodland.css">
+  <link rel="stylesheet" href="css/modern-nature.css">
 </head>
 
 <body>
 
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<nav aria-label="Primary navigation">
-  <a href="index.html" aria-current="page">Home</a>
-  <a href="about.html">About</a>
-  <a href="apiary.html">Our Apiary</a>
-  <a href="education.html">Education</a>
-  <a href="contact.html">Contact</a>
+<header class="site-header" id="page-top">
+  <div class="masthead">
+    <a class="site-brand" href="index.html" aria-label="HoneyTide Apiary home"><svg class="signature-mark" viewBox="0 0 100 86" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M14 61C27 46 38 72 51 59S75 51 88 62M14 72C27 57 38 83 51 70S75 62 88 73"/><ellipse cx="48" cy="34" rx="15" ry="11" fill="#edbd58"/><path d="M41 24v20M50 24v21M61 29l8-5M61 35l9 3"/><path d="M42 23C18 2 24 45 42 23ZM48 22C57-2 76 22 48 22Z" fill="#fffdf3"/><path d="M10 37C10 22 25 27 20 41" stroke-dasharray="2 5"/></g></svg><span class="wordmark">HoneyTide<span class="brand-detail">APIARY · SPRINGFIELD, OREGON</span></span></a>
+    <span class="brand-promise">Nature’s Rhythm.<br>A Bee’s Blessing.</span>
+    <a class="swarm-link" href="contact.html#swarm-help">Found a swarm? <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+  <nav class="primary-nav" aria-label="Primary navigation"><a href="index.html" aria-current="page">Home</a>
+<a href="about.html">About</a>
+<a href="apiary.html">Our Apiary</a>
+<a href="education.html">Education</a>
+<a href="contact.html">Contact</a>
+<a href="privacy-policy.html">Privacy</a>
 </nav>
 
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 <header class="hero">
 
   <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
@@ -83,7 +92,7 @@
     <p>
       Owned and operated by Camron Purdum, HoneyTide Apiary is a small growing
       apiary built around responsible beekeeping, pollinator stewardship, and
-      four colonies: Zion, Tortooga, Butera, and The Anchor Colony.
+      the colonies whose stories you’ll find here.
     </p>
 
     <p>
@@ -106,9 +115,9 @@
 
   </div>
 
+<button class="motion-control" type="button" hidden>Pause background video</button>
 </header>
-
-<section>
+<section id="beekeeper" class="journal-chapter">
   <div class="two-column">
     <div class="image-card">
       <img src="images/camron-fieldwork.jpg" alt="Camron Purdum working with bees in the field" width="1200" height="1600" loading="lazy" decoding="async">
@@ -119,7 +128,7 @@
       <h2>The Beekeeper Behind HoneyTide</h2>
 
       <p>
-        Hi everyone! My name is Camron Purdum Founder and Head Beekeper of HoneyTide Apiary located in the Springfield/Eugene
+        Hi everyone! My name is Camron Purdum Founder and Head Beekeeper of HoneyTide Apiary located in the Springfield/Eugene
         area. I am building the apiary from the ground up through hands-on colony
         care, continued learning, and a steady respect for what the bees need each
         season.
@@ -149,14 +158,14 @@
   </div>
 </section>
 
-<section class="apiary">
+<section class="apiary" id="colonies">
   <div class="apiary-inner">
 
-    <div class="section-kicker">Current Colonies</div>
+    <div class="section-kicker">The colony journal</div>
     <h2>Zion, Tortooga, Butera, and The Anchor Colony</h2>
 
     <p class="section-intro">
-      I currently manage four colonies under HoneyTide Apiary. Each one has
+      These are some of the colonies that began HoneyTide’s story. Each one has
       shaped the early story of the apiary and continues to teach something
       different about timing, patience, resilience, and responsible hive management.
     </p>
@@ -223,7 +232,7 @@
 
   <div class="product-preview-grid">
     <div class="product-preview-card">
-      <h3>🍯 Small-Batch Local Honey</h3>
+      <h3>Small-Batch Local Honey</h3>
       <p>
         Seasonal honey harvested in small batches only when colony health, hive
         stores, and local conditions allow.
@@ -231,7 +240,7 @@
     </div>
 
     <div class="product-preview-card">
-      <h3>🕯️ Beeswax Products</h3>
+      <h3>Beeswax Products</h3>
       <p>
         Future beeswax goods made from responsibly collected wax as the apiary
         matures and the bees can spare it.
@@ -239,7 +248,7 @@
     </div>
 
     <div class="product-preview-card">
-      <h3>🌿 Other Hive Goods</h3>
+      <h3>Other Hive Goods</h3>
       <p>
         Additional hive-based products may be explored over time, always guided
         by the season, the health of the colonies, and responsible apiary management.
@@ -271,7 +280,7 @@
 
     <div class="pillar-grid">
       <div class="pillar-card">
-        <h3>🐝 Colony Health First</h3>
+        <h3>Colony Health First</h3>
         <p>
           Hive products only make sense when the bees have enough for themselves.
           Colony strength, food stores, and seasonal timing come before harvest goals.
@@ -279,7 +288,7 @@
       </div>
 
       <div class="pillar-card">
-        <h3>🌿 Observation-Based Management</h3>
+        <h3>Observation-Based Management</h3>
         <p>
           Each colony has its own rhythm. Camron manages the apiary by watching
           what the bees are showing and responding with patience instead of forcing growth.
@@ -287,7 +296,7 @@
       </div>
 
       <div class="pillar-card">
-        <h3>🍯 Pollinator Stewardship</h3>
+        <h3>Pollinator Stewardship</h3>
         <p>
           HoneyTide works with honey bees, but the broader goal includes pollinator
           awareness, native bee habitat, flowering plants, and healthier local landscapes.
@@ -297,7 +306,7 @@
   </div>
 </section>
 
-<section class="beyond-hive">
+<section class="beyond-hive" id="beyond-hive">
   <div class="section-kicker">Education, Swarms, and Community</div>
   <h2>Beyond the Hive</h2>
 
@@ -362,16 +371,16 @@
     education, and sustainable beekeeping practices.
   </p>
 
-  <div class="footer-links" aria-label="Footer navigation">
+  <nav class="footer-links" aria-label="Footer navigation">
     <a href="index.html" aria-current="page">Home</a>
     <a href="about.html">About</a>
     <a href="apiary.html">Our Apiary</a>
     <a href="education.html">Education</a>
     <a href="contact.html">Contact</a>
     <a href="privacy-policy.html">Privacy Policy</a>
-  </div>
+  </nav>
 
-  <div class="footer-social" aria-label="Social links">
+  <div class="footer-social" role="group" aria-label="Social links">
     <a href="https://www.facebook.com/HoneyTideApiary" target="_blank" rel="noopener noreferrer">Facebook</a>
     <a href="https://www.youtube.com/@HoneyTideApiary" target="_blank" rel="noopener noreferrer">YouTube</a>
   </div>
@@ -381,6 +390,7 @@
     <a href="mailto:honeytideapiary@gmail.com">honeytideapiary@gmail.com</a>
   </p>
 
+  <a class="back-to-top" href="#page-top">Back to top <span aria-hidden="true">↑</span></a>
   <p id="copyright"></p>
 </footer>
 
@@ -391,5 +401,6 @@ document.getElementById("copyright").innerHTML =
   " HoneyTide Apiary. All rights reserved.";
 </script>
 
+<script src="js/honeytide.js" defer></script>
 </body>
 </html>

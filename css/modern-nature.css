@@ -1,0 +1,88 @@
+/* HoneyTide: living greens, clean type, glass navigation, quiet responsive motion. */
+:root { --forest:#174c3c; --earth:#233d33; --cream:#f4f7ed; --white:#fbfff7; --leaf:#e0eed6; --honey:#e8bd59; --deep-honey:#72521e; --border:#abc5ae; --nav-height:64px; }
+body { background:#f4f7ed; background-image:radial-gradient(ellipse at 0 25%,#e0edcb 0,transparent 45%),radial-gradient(ellipse at 100% 65%,#d8eee5 0,transparent 42%); font-family:Arial,Helvetica,sans-serif; line-height:1.75; }
+h1,h2,h3 { font-family:Arial,Helvetica,sans-serif; font-style:normal; letter-spacing:-.035em; font-weight:700; }
+h2 { font-size:clamp(1.9rem,3.9vw,3.1rem); line-height:1.15; text-wrap:balance; }
+h3 { font-size:1.3rem; letter-spacing:-.02em; }
+.site-header { border-top:3px solid #8baa60; background:linear-gradient(115deg,#f9fbed,#e6f2e8); }
+.wordmark { font-family:Georgia,serif; font-size:2.5rem; letter-spacing:-.055em; }
+.brand-promise { font-size:1rem; }
+.primary-nav { position:sticky; top:0; z-index:100; min-height:64px; gap:.4rem 1.25rem; background:#edf5eaf2; border-top:1px solid #c5d9bd; border-bottom:1px solid #aac3ad; box-shadow:0 5px 24px #153f2c10; backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); isolation:isolate; }
+.primary-nav::after { content:""; position:absolute; left:0; right:0; bottom:-1px; height:3px; background:linear-gradient(90deg,#376e42,#829f39,#c49838); transform:scaleX(var(--reading-progress,0)); transform-origin:left; pointer-events:none; }
+.primary-nav a { min-height:44px; padding:.55rem .85rem; border-radius:7px; border:1px solid transparent; transition:background .18s,color .18s; }
+.primary-nav a[aria-current="page"] { border:1px solid #315d43; background:#d4e6c2; color:#173f30; font-weight:700; }
+.primary-nav a:hover { background:#d8e9cc; }
+.swarm-link { border-radius:8px; background:#e2edce; }
+.hero h1 { font:700 clamp(2.2rem,4.5vw,4.3rem)/1.1 Arial,Helvetica,sans-serif; letter-spacing:-.045em; max-width:940px; }
+.hero p { font-size:1.05rem; line-height:1.75; }
+.hero .slogan { font-family:Georgia,serif; font-size:1.45rem; }
+.hero::after,.contact-hero::after { height:45px; clip-path:ellipse(60% 65% at 50% 100%); background:var(--cream); }
+.hero-overlay,.contact-overlay { background:linear-gradient(120deg,#08291fd9,#102915bf); }
+.hero-content,.contact-content { animation:arrive .65s ease-out both; }
+.section-kicker::before,.colony::before,.checklist-item::before { content:none; }
+.section-kicker,.eyebrow { font-family:Arial,Helvetica,sans-serif; letter-spacing:.12em; font-weight:700; font-size:.75rem; }
+.colony { padding-left:0; }
+.button,.closing .button { border-radius:9px; border:1px solid #456445; box-shadow:0 4px 14px #264d3512; font-size:.92rem; min-height:48px; transition:transform .2s,box-shadow .2s,background .2s; }
+.button:hover,.closing .button:hover { transform:translateY(-2px); box-shadow:0 8px 22px #264d3529; }
+.button-primary { background:linear-gradient(135deg,#f5d17b,#e8bd59); color:#243c2b; }
+.button-primary:hover { background:#f6d884; }
+.image-card { padding:10px; border-radius:15px; background:#ffffffa6; border:1px solid #c5d6b8; box-shadow:0 16px 36px #193d2912; }
+.image-card::before { content:none; }
+.image-card img,.hero-apiary-image img { border-radius:8px; }
+.hero-apiary-image { background:#fafff4ad; padding:10px; border:1px solid #b5c9a3; border-radius:15px; box-shadow:0 16px 38px #294b3012; }
+.about-hero img { border-radius:12px; box-shadow:0 14px 38px #193d291a; }
+.about-hero h1 { font-style:normal; }
+.apiary { background-color:#e0eed6; background-image:radial-gradient(ellipse at 100% 0,#cde8da,transparent 65%),url('../images/botanical-border.svg'); background-position:center,left center; background-size:auto,110px auto; background-repeat:no-repeat; border:0; }
+.quote-box { background:linear-gradient(100deg,#e0eed6,#eff5e7); border-left:3px solid #719963; border-radius:0 12px 12px 0; font-family:Georgia,serif; }
+.journal-chapter::after,.products-preview::before { opacity:.7; }
+.pillars,.values { background:radial-gradient(ellipse at 95% 10%,#356342,transparent 65%),#173f32; }
+.pillar-card,.value-card { border-top:1px solid #73977b; }
+.product-preview-card h3 { color:var(--forest); }
+.colony-section { border-top:1px solid #bdd1b6; }
+.colony-media img,.colony-media video { border-radius:10px; box-shadow:0 12px 30px #193d2912; }
+.colony-section .colony-label { border:1px solid #9fb68e; border-radius:6px; font:600 .88rem/1.5 Arial,sans-serif; background:#e2edcf; }
+.content-card { border-bottom:1px solid #bed0b3; }
+.apiary-page-hero h1,.education-hero h1,.contact-content h1 { font:700 clamp(2.1rem,5vw,4.5rem)/1.12 Arial,sans-serif; letter-spacing:-.035em; }
+.education-card,.contact-card { background:linear-gradient(140deg,#edf4e6,#e3efdf); border:1px solid #bdd1b6; border-radius:14px; }
+.contact-card.primary-contact { border-top:3px solid #8aa95e; }
+.resource-card { border:1px solid #b3c9ab; border-radius:10px; background:#ffffff70; transition:background .2s,transform .2s; }
+.resource-card:hover { transform:translateY(-2px); background:#e2eed7; }
+.learning-path-card,.plant-card { border-left:2px solid #8aaa65; }
+.checklist-item { padding-left:1rem; border-left:2px solid #91ad72; border-bottom:0; }
+.friendly-note { background:#e2edda; border:1px solid #b6cba8; border-radius:14px; }
+footer { background:radial-gradient(ellipse at 0 100%,#295340,transparent 70%),#143e30; }
+footer::before { background:#143e30; clip-path:ellipse(60% 65% at 50% 100%); height:35px; top:-33px; }
+.footer-title { font-family:Georgia,serif; font-style:normal; }
+.motion-control { border-radius:8px; background:#f3f8eaf2; }
+:where(section[id],article[id],main[id],header[id]) { scroll-margin-top:calc(var(--nav-height) + 24px); }
+a,button,summary { scroll-margin-top:calc(var(--nav-height) + 20px); scroll-margin-bottom:24px; }
+.skip-link { position:fixed; z-index:200; }
+.in-view { animation:arrive .55s ease-out both; }
+@keyframes arrive { from { opacity:1; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
+@media(hover:hover) and (pointer:fine) {
+ .product-preview-card,.colony,.plant-card { transition:background .2s; }
+ .product-preview-card:hover,.colony:hover,.plant-card:hover { background:#ffffff60; }
+}
+@media(max-width:850px) {
+ :root { --nav-height:104px; }
+ .primary-nav { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); min-height:104px; gap:3px; padding:5px .6rem; }
+ .primary-nav a { font-size:.82rem; min-height:44px; padding:.35rem; }
+ .wordmark { font-size:2rem; }
+ .hero h1 { font-size:clamp(2.1rem,8vw,2.9rem); }
+ .hero .slogan { font-size:1.25rem; }
+ .apiary { background-size:auto,55px auto; }
+ .hero-content,.contact-content { animation-duration:.4s; }
+ .beyond-hive,.vision,.education-close,.closing { background-size:42px auto; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .hero-content,.contact-content,.in-view { animation:none; transform:none; }
+ .button:hover,.resource-card:hover { transform:none; }
+ .primary-nav::after { display:none; }
+}
+@media(forced-colors:active) {
+ .primary-nav { background:Canvas; border:1px solid CanvasText; }
+ .primary-nav a[aria-current="page"] { border:2px solid LinkText; }
+ .primary-nav::after { display:none; }
+}
+/* Override earlier journal anchor spacing so sticky navigation never covers a target. */
+section[id],article[id],main[id],header[id] { scroll-margin-top:calc(var(--nav-height) + 24px); }
