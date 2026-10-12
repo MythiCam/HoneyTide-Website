@@ -25,3 +25,37 @@
     respectPreference();
   });
 })();
+
+/* Scroll progress and one-time section arrivals; content never starts hidden. */
+(() => {
+  const nav = document.querySelector('.primary-nav');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let pending = false;
+  const update = () => {
+    const distance = document.documentElement.scrollHeight - innerHeight;
+    const progress = distance > 0 ? Math.min(1, Math.max(0, scrollY / distance)) : 0;
+    nav?.style.setProperty('--reading-progress', progress);
+    pending = false;
+  };
+  const requestUpdate = () => {
+    if (!pending) { pending = true; requestAnimationFrame(update); }
+  };
+  addEventListener('scroll', requestUpdate, { passive: true });
+  addEventListener('resize', requestUpdate);
+  addEventListener('load', requestUpdate);
+  if (nav && 'ResizeObserver' in window) new ResizeObserver(() => {
+    document.documentElement.style.setProperty('--nav-height', nav.offsetHeight + 'px');
+    requestUpdate();
+  }).observe(nav);
+  update();
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        if (!reduced.matches) entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('main > section').forEach(section => observer.observe(section));
+  }
+})();
