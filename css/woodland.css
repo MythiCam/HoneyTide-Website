@@ -95,3 +95,105 @@ footer img { transform:none; }
  .contact-card { padding:1.5rem; }
 }
 @media(prefers-reduced-motion:reduce) { .button { transition:none; } }
+
+/* HoneyTide signature: a bee's flight becomes the tide. */
+.site-header { background:#faf6e7; border-top:5px solid #214d37; position:relative; }
+.masthead { max-width:1240px; padding:1.3rem 2rem 1rem; margin:auto; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
+.site-brand { display:flex; align-items:center; gap:.85rem; color:var(--forest); text-decoration:none; }
+.signature-mark { width:76px; height:66px; flex-shrink:0; }
+.wordmark { font-family:Georgia,serif; font-size:2.5rem; line-height:1; letter-spacing:-.055em; }
+.brand-detail { display:block; margin-top:.7rem; font:600 .65rem/1.4 Arial,sans-serif; letter-spacing:.13em; }
+.brand-promise { font-style:italic; color:var(--deep-honey); line-height:1.4; font-size:1.05rem; }
+.swarm-link { color:var(--forest); font:600 .92rem/1.5 Arial,sans-serif; padding:.8rem 1rem; border:1px solid #80966c; border-radius:3px; text-underline-offset:4px; background:var(--leaf); }
+.primary-nav { gap:.6rem 2rem; padding:.3rem 1rem; border-top:1px solid #b7c3a1; border-bottom:1px solid #80966c; }
+.primary-nav a { min-height:44px; display:inline-flex; align-items:center; }
+.primary-nav a[aria-current="page"] { box-shadow:none; border-bottom:3px solid #79501e; font-weight:800; }
+.primary-nav a:hover { box-shadow:none; background:#cbdcb5; }
+.honeytide-paths { padding:2rem max(1.5rem,calc((100% - 1180px)/2)); background:#e3eacd; display:grid; grid-template-columns:.8fr 1fr 1fr 1fr; align-items:center; gap:1.5rem; border-bottom:1px solid #a9b992; }
+.paths-title { font-size:1.6rem; line-height:1.25; margin:0; color:var(--forest); }
+.paths-title em { font-size:2rem; }
+.honeytide-paths > a { display:grid; grid-template-columns:2rem 1fr; column-gap:.5rem; padding:.75rem 0 .75rem 1rem; border-left:1px solid #95a87e; color:var(--forest); text-decoration:none; }
+.honeytide-paths strong { font-size:1.15rem; }
+.honeytide-paths a > span:last-child { grid-column:2; font: .85rem/1.6 Arial,sans-serif; margin-top:.3rem; }
+.honeytide-paths a:hover strong { text-decoration:underline; text-underline-offset:4px; }
+.path-number { color:var(--deep-honey); font:italic 1rem/1.8 Georgia,serif; }
+.page-contents { margin:1.5rem auto 0; max-width:1072px; padding:0 1.5rem; color:var(--forest); }
+.page-contents summary { padding:.8rem 0; cursor:pointer; border-bottom:1px dashed #a9b992; font:600 .9rem/1.5 Arial,sans-serif; }
+.contents-hint { font:italic .9rem Georgia,serif; color:#506447; margin-left:1rem; }
+.page-contents nav { justify-content:flex-start; padding:1rem 0; background:transparent; border:0; gap:.5rem 1rem; }
+.page-contents nav a { text-decoration:underline; text-underline-offset:4px; min-height:44px; display:inline-flex; align-items:center; padding:.5rem; }
+section[id],article[id] { scroll-margin-top:1rem; }
+.hero,.contact-hero { background-color:#153c29; }
+.hero-content h1,.contact-content h1 { text-wrap:balance; }
+.hero-overlay { background:rgba(8,29,18,.76); }
+.contact-overlay { background:rgba(8,29,18,.76); }
+.motion-control { font:600 .8rem/1.5 Arial,sans-serif; background:#faf6e7; color:#214d37; border:1px solid #214d37; border-radius:4px; padding:.65rem 1rem; min-height:44px; cursor:pointer; margin-bottom:1rem; }
+[hidden] { display:none !important; }
+.journal-chapter { position:relative; }
+.journal-chapter::after { content:""; display:block; height:90px; background:url('../images/honeytide-rhythm.svg') center/cover no-repeat; margin:3rem -1.5rem -4rem; pointer-events:none; }
+.section-kicker::before { content:""; display:inline-block; width:17px; height:10px; border-top:1px solid currentColor; border-bottom:1px solid currentColor; border-radius:50%; margin-right:.65rem; vertical-align:middle; }
+.apiary-inner > h2 { max-width:800px; margin-left:auto; margin-right:auto; text-wrap:balance; }
+.colony-list { counter-reset:colony; }
+.colony { position:relative; padding-left:3.2rem; }
+.colony::before { counter-increment:colony; content:counter(colony,decimal-leading-zero); position:absolute; left:0; top:1.3rem; color:var(--deep-honey); font:italic 1.6rem Georgia,serif; }
+.colony-section .colony-label { font:italic 1.2rem/1.5 Georgia,serif; padding:.4rem 1rem; border-radius:0 45% 0 0; }
+.products-preview > h2 { max-width:870px; margin-left:auto; margin-right:auto; text-wrap:balance; }
+.products-preview::before { content:""; display:block; height:75px; background:url('../images/honeytide-rhythm.svg') center/cover no-repeat; margin:-2rem -1rem 2rem; }
+footer { position:relative; border-top:0; }
+footer::before { content:""; position:absolute; top:-18px; left:0; right:0; height:20px; background:#163e2b; clip-path:polygon(0 55%,10% 25%,20% 55%,30% 20%,40% 55%,50% 20%,60% 55%,70% 20%,80% 55%,90% 20%,100% 55%,100% 100%,0 100%); }
+footer .footer-links { background:transparent; border:0; padding:0; flex-direction:row; }
+footer .footer-links a,footer .footer-social a { color:#f8dc91; min-height:44px; display:inline-flex; align-items:center; justify-content:center; border-bottom:1px solid transparent; }
+footer .footer-links a[aria-current="page"] { color:#fffdf3; background:transparent; box-shadow:none; border-bottom-color:#f8dc91; }
+footer .footer-links a:hover,footer .footer-social a:hover { color:#fffdf3; background:#28553b; box-shadow:none; }
+.back-to-top { display:inline-flex; align-items:center; min-height:44px; color:#fffdf3; text-underline-offset:4px; margin-top:1rem; }
+#copyright { opacity:1; color:#dce8c9; }
+main a:not(.button):not(.resource-card) { text-underline-offset:4px; }
+main:focus { outline:none; }
+:where(p,li) { overflow-wrap:break-word; }
+:where(h1,h2,h3) { overflow-wrap:break-word; }
+a:focus-visible,button:focus-visible,summary:focus-visible { outline:3px solid #193e2a; outline-offset:3px; box-shadow:0 0 0 6px #fffdf3; }
+@media(min-width:851px) { .footer-links,.footer-social { max-width:900px; } }
+@media(max-width:850px) {
+ .masthead { padding:1rem 1.25rem; gap:1rem; flex-wrap:wrap; }
+ .signature-mark { width:55px; height:48px; }
+ .wordmark { font-size:2rem; }
+ .brand-detail { font-size:.58rem; letter-spacing:.08em; }
+ .brand-promise { display:none; }
+ .swarm-link { font-size:.82rem; padding:.65rem .8rem; }
+ .primary-nav { gap:.15rem .25rem; padding:.25rem .5rem; }
+ .primary-nav a { padding:.6rem .65rem; font-size:.86rem; }
+ .honeytide-paths { grid-template-columns:1fr; gap:.5rem; padding:1.6rem 1.25rem; }
+ .paths-title br { display:none; }
+ .paths-title em { font-size:1.6rem; }
+ .honeytide-paths > a { border-left:0; border-top:1px solid #a9b992; padding:.9rem 0; }
+ .page-contents { padding:0 1.25rem; }
+ .contents-hint { display:none; }
+ .colony { padding-left:2.7rem; }
+ footer .footer-links { gap:.4rem; }
+ footer .footer-links a { width:auto; }
+}
+@media(max-width:400px) {
+ .masthead { justify-content:center; }
+ .site-brand { justify-content:center; }
+ .swarm-link { width:100%; text-align:center; }
+ .primary-nav { gap:0; }
+ .primary-nav a { padding:.6rem .5rem; }
+}
+@media(prefers-reduced-motion:reduce) {
+ /* Keep the original videos visible; script pauses them, with optional play. */
+ .hero-video,.contact-video,.colony-video { display:block; }
+}
+@media(forced-colors:active) {
+ .primary-nav a[aria-current="page"], .button, .motion-control { border:2px solid ButtonText; }
+ a:focus-visible,button:focus-visible,summary:focus-visible { outline:3px solid Highlight; box-shadow:none; }
+}
+/* Playback stays within reach without interrupting the brand composition. */
+.hero,.contact-hero { padding-bottom:6rem; }
+.hero-logo { display:block; margin-left:auto; margin-right:auto; }
+.motion-control { position:absolute; z-index:4; right:1.5rem; bottom:1.75rem; margin:0; }
+@media(max-width:850px) {
+ .primary-nav { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:0; }
+ .primary-nav a { justify-content:center; padding:.6rem .25rem; line-height:1.3; text-align:center; }
+ .hero h1 { font-size:clamp(2.2rem,9vw,2.8rem); }
+ .motion-control { right:1.25rem; bottom:1.75rem; }
+}
