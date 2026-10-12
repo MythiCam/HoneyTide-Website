@@ -1,0 +1,97 @@
+/* HoneyTide's garden journal. Media sources and playback remain original. */
+:root {
+ --forest:#214d37; --earth:#283c2d; --cream:#faf6e7; --white:#fffdf3;
+ --honey:#edbd58; --deep-honey:#79501e; --soft-gold:#f8dc91; --border:#a9b992;
+ --leaf:#dce8c9; --sage:#9eb68b; --clay:#b76643;
+}
+body { background-color:var(--cream); background-image:radial-gradient(#66805015 .8px,transparent .8px); background-size:7px 7px; color:var(--earth); font-family:Georgia,serif; line-height:1.75; }
+nav { background:#e2eacd; border-bottom:1px solid #80966c; padding:1rem 1.5rem; gap:.5rem 1.7rem; }
+nav a { color:var(--forest); font-size:.95rem; padding:.5rem .7rem; border-radius:0; font-weight:600; }
+nav a:hover, nav a[aria-current="page"] { color:var(--forest); background:none; box-shadow:inset 0 -3px var(--clay); }
+h1,h2 { font-family:Georgia,serif; font-weight:normal; letter-spacing:-.045em; }
+h2 { font-size:clamp(2.3rem,4.5vw,3.8rem); }
+h3 { font-family:Georgia,serif; font-weight:normal; font-size:1.45rem; }
+.eyebrow,.section-kicker { letter-spacing:.13em; font-size:.75rem; color:var(--deep-honey); }
+section { padding-top:4.5rem; padding-bottom:4.5rem; }
+.button,.about-hero .button { border-radius:55% 45% 48% 52% / 12% 16% 14% 16%; min-width:0; padding:.85rem 1.5rem; box-shadow:3px 4px 0 #284d3729; border:1px solid var(--forest); transition:transform .18s,box-shadow .18s; }
+.button-primary,.closing .button { background:var(--honey); color:#243c2b; }
+.button-primary:hover,.closing .button:hover { background:#f8d17e; color:#243c2b; box-shadow:1px 2px 0 #284d3729; transform:translateY(1px); }
+.button-secondary { background:transparent; color:var(--forest); }
+.button-secondary:hover { background:var(--forest); color:var(--white); }
+a:focus-visible,button:focus-visible { outline:3px solid #193e2a; outline-offset:5px; box-shadow:0 0 0 6px #fffdf3; }
+.hero { min-height:90vh; padding:3rem 1.5rem 5rem; }
+.hero-overlay { background:linear-gradient(90deg,#0c291dcc,#14312566 60%,#12281c99); }
+.hero-content { max-width:930px; }
+.hero-logo { width:clamp(160px,21vw,280px); margin-bottom:.4rem; filter:drop-shadow(0 3px 12px #0005); }
+.hero h1 { max-width:900px; font-size:clamp(2.6rem,5.5vw,5.2rem); font-style:italic; }
+.hero p { max-width:680px; font-size:1.08rem; margin-bottom:1rem; }
+.hero .slogan { font-size:1.5rem; }
+.hero-button { color:var(--white); border-color:var(--white); background:#15382366; }
+.hero::after,.contact-hero::after { content:""; position:absolute; bottom:-1px; left:0; right:0; height:28px; background:var(--cream); clip-path:polygon(0 60%,3% 45%,7% 65%,11% 35%,16% 60%,21% 40%,28% 65%,35% 38%,43% 60%,51% 40%,58% 65%,65% 38%,73% 58%,80% 40%,88% 66%,95% 35%,100% 60%,100% 100%,0 100%); z-index:3; }
+.two-column { gap:4rem; }
+.image-card,.hero-apiary-image,.wide-image { background:transparent; padding:0; border-radius:0; box-shadow:none; }
+.image-card { position:relative; padding:13px; background:#fffdf3; border:1px solid #acb496; box-shadow:7px 8px 0 #bac7a54d; }
+.image-card::before { content:""; position:absolute; width:90px; height:26px; background:#d8bb768f; left:calc(50% - 45px); top:-10px; transform:rotate(-5deg); z-index:1; }
+.image-card img,.hero-apiary-image img { border-radius:0; }
+.quote-box { background:#e3e9cf; border:0; border-left:3px solid var(--clay); border-radius:0; box-shadow:none; font-style:italic; }
+.apiary { background-color:var(--leaf); background-image:url('../images/botanical-border.svg'); background-position:left center; background-size:150px auto; background-repeat:no-repeat; border-top:1px solid #a9b992; border-bottom:1px solid #a9b992; }
+.apiary-inner { padding-top:4rem; padding-bottom:4rem; }
+.hero-apiary-image { max-width:640px; padding:12px; background:#fffdf3; border:1px solid #a9b992; box-shadow:8px 8px 0 #87986f35; }
+.colony-list { column-gap:3rem; row-gap:0; }
+.colony { background:transparent; border:0; border-top:1px dashed #81966d; border-radius:0; padding:1.6rem 0; }
+.colony h3 { color:var(--forest); }
+.products-preview { position:relative; }
+.product-preview-grid { gap:0; border-top:1px solid #a9b992; border-bottom:1px solid #a9b992; }
+.product-preview-card { background:transparent; border:0; border-radius:0; box-shadow:none; padding:2rem; }
+.product-preview-card + .product-preview-card { border-left:1px dashed #a9b992; }
+.product-preview-card:hover { transform:none; box-shadow:none; }
+.pillars,.values { background:#254f39; color:#fffced; position:relative; }
+.pillars .section-kicker,.values .eyebrow { color:var(--soft-gold); }
+.pillar-card,.value-card { border:0; border-radius:0; background:transparent; border-top:1px solid #97b18b; padding:1.5rem 0; }
+.pillar-grid,.value-grid { gap:2.5rem; }
+.beyond-hive,.vision,.education-close,.closing { background-image:url('../images/botanical-border.svg'); background-repeat:no-repeat; background-size:95px auto; background-position:right center; padding-left:2rem; padding-right:6rem; }
+.vision { border-top:1px dashed #a9b992; }
+footer { background:#163e2b; border-top:10px solid #9ab07d; padding:3rem 1.5rem; }
+footer img { transform:none; }
+.footer-title { font-style:italic; font-size:1.7rem; }
+.footer-links a,.footer-social a { border-radius:0; }
+.about-hero { gap:4rem; }
+.about-hero h1 { font-style:italic; }
+.about-hero img { border-radius:0; box-shadow:12px 12px 0 var(--leaf); }
+.content-card { border:0; border-bottom:1px dashed #a9b992; border-radius:0; background:transparent; box-shadow:none; padding:1rem 0 2.5rem; }
+.content-card:last-child { border-bottom:0; }
+.about-hero,.content-section { background-image:none; }
+.apiary-page-hero h1,.education-hero h1,.contact-content h1 { font-style:italic; font-weight:normal; font-size:clamp(2.7rem,6vw,5.4rem); line-height:1.1; }
+.apiary-stats { margin:0 auto; padding-top:2rem; padding-bottom:2rem; border-bottom:1px dashed var(--border); }
+.stat-card { border:0; border-radius:0; background:transparent; box-shadow:none; padding:.6rem; }
+.stat-card:hover { transform:none; box-shadow:none; }
+.stat-number { font-family:Georgia,serif; font-weight:normal; color:var(--forest); }
+.colony-copy { background:transparent; border:0; border-radius:0; box-shadow:none; padding:1rem; }
+.colony-section { border-top:1px dashed #a9b992; }
+.colony-label { background:#dce8c9; color:var(--forest); border-radius:0; border-bottom:2px solid #80966c; }
+.colony-media img,.colony-media video { border-radius:0; box-shadow:6px 6px 0 #becba673; }
+.education-grid,.contact-grid { gap:2.5rem; }
+.education-card,.contact-card { border:0; border-top:3px solid #8ca976; border-radius:0; background:#edf0db; box-shadow:none; padding:2rem; }
+.education-card:hover,.contact-card:hover { transform:none; box-shadow:none; }
+.learning-path-card,.plant-card { border:0; border-radius:0; border-left:2px solid #8ca976; background:transparent; box-shadow:none; }
+.resource-card { border:1px dashed #81966d; border-radius:0; background:transparent; box-shadow:none; }
+.resource-card:hover { background:#e3eacd; transform:none; box-shadow:none; }
+.checklist-item { border:0; border-radius:0; border-bottom:1px dashed #a9b992; background:transparent; box-shadow:none; text-align:left; }
+.checklist-item::before { content:'✿'; color:#926227; margin-right:.75rem; }
+.friendly-note { background:#e3eacd; border:1px solid #a9b992; border-radius:0; box-shadow:none; }
+.contact-card button.button { border:1px solid var(--forest); }
+@media(max-width:850px) {
+ nav { flex-direction:row; gap:.2rem .45rem; padding:.55rem; }
+ nav a { padding:.6rem .5rem; }
+ .hero { padding-top:2rem; }
+ .hero h1 { font-size:2.8rem; }
+ .hero-logo { width:190px; }
+ .hero p { font-size:1rem; }
+ .two-column,.about-hero { gap:2.5rem; }
+ .apiary { background-size:65px auto; }
+ .product-preview-card + .product-preview-card { border-left:0; border-top:1px dashed #a9b992; }
+ .beyond-hive,.vision,.education-close,.closing { background-size:50px auto; padding-right:3.2rem; padding-left:1.2rem; }
+ .contact-card .button { min-width:0; width:100%; margin:.5rem 0; }
+ .contact-card { padding:1.5rem; }
+}
+@media(prefers-reduced-motion:reduce) { .button { transition:none; } }
